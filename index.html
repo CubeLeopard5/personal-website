@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adrien Michaud - Développeur .NET & Full Stack passionné par les technologies web modernes">
-    <meta name="keywords" content="Développeur .NET, Vue.js, Node.js, Full Stack, Neuchâtel, Switzerland">
+    <meta name="description" content="Adrien Michaud - .NET & Full Stack Developer specialized in government digital transformation. 3 years of experience with Blazor, .NET MAUI, and Clean Architecture for public sector projects in Neuchâtel, Switzerland.">
+    <meta name="keywords" content=".NET Developer, Blazor, MAUI, Government Services, e-Voting, Digital Transformation, Neuchâtel, Switzerland, Clean Architecture, CQRS, MediatR">
     <meta name="author" content="Adrien Michaud">
-    <title>Adrien Michaud - Développeur .NET & Full Stack</title>
+    <title>Adrien Michaud - .NET & Full Stack Developer</title>
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +16,19 @@
     <!-- Header / Hero Section -->
     <header class="hero">
         <nav class="navbar">
-            <div class="container">
+            <div class="container nav-container">
                 <div class="nav-brand">AM</div>
-                <ul class="nav-menu">
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#experience">Expérience</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,10 +36,10 @@
         <div class="hero-content container">
             <div class="hero-text">
                 <h1 class="hero-title">Adrien Michaud</h1>
-                <p class="hero-subtitle">Développeur .NET & Full Stack</p>
+                <p class="hero-subtitle">.NET & Full Stack Developer</p>
                 <p class="hero-location">Neuchâtel, Switzerland</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
                     <a href="https://www.linkedin.com/in/adrienmichaud/" target="_blank" class="btn btn-secondary">LinkedIn</a>
                 </div>
             </div>
@@ -44,29 +49,31 @@
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="section-title">À propos</h2>
+            <h2 class="section-title">About</h2>
             <div class="about-content">
-                <p>Ayant suivi la formation de l'école Epitech, je suis animé des technologies web et possède de larges compétences en programmation. Je développe principalement en Vue.js et Node.js.</p>
+                <p>Having completed my education at Epitech, I am passionate about modern web technologies and software development. I specialize in .NET development with Blazor for building robust and scalable applications.</p>
 
-                <p>Mes nombreuses expériences professionnelles me permettent d'efficacement répondre à vos besoins et d'exceller dans mon domaine.</p>
+                <p>With 2 years of professional experience across diverse projects, I bring a proven track record of delivering high-quality solutions that meet business objectives and exceed client expectations.</p>
+
+                <p>Beyond my professional work, I am an active member of ESN Neuchâtel (Erasmus Student Network), where I help international students discover Switzerland and integrate into the local community.</p>
 
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3>Ce que je peux faire</h3>
+                        <h3>What I Can Do</h3>
                         <ul>
-                            <li>Création d'un site web</li>
-                            <li>Réalisation d'un MVP</li>
-                            <li>Traduire une maquette de site en code</li>
-                            <li>Travailler avec des équipes de développeurs frontend et backend</li>
-                            <li>L'évolution ou la refonte d'applications web</li>
-                            <li>L'ajout de fonctionnalités à vos projets</li>
+                            <li>Build enterprise-grade web applications</li>
+                            <li>Develop MVPs and proof-of-concepts</li>
+                            <li>Transform design mockups into production-ready code</li>
+                            <li>Collaborate seamlessly with cross-functional teams</li>
+                            <li>Modernize and refactor legacy applications</li>
+                            <li>Implement new features and integrate APIs</li>
                         </ul>
                     </div>
 
                     <div class="service-card">
-                        <h3>Mon objectif</h3>
-                        <p><strong>Votre satisfaction</strong> : comprendre vos besoins et apporter des solutions adaptées ainsi que mon savoir. Je suis donc à votre écoute et mettrai tout en oeuvre pour la réussite de vos projets.</p>
-                        <p>Je suis toujours à la recherche de nouvelles collaborations afin d'apporter mon expertise à vos projets.</p>
+                        <h3>My Approach</h3>
+                        <p><strong>Your success is my priority</strong>. I focus on understanding your business needs and delivering tailored solutions that combine technical excellence with practical value. Clean code, best practices, and clear communication are at the core of everything I do.</p>
+                        <p>I am always open to new collaborations and exciting challenges where I can contribute my expertise to help you achieve your goals.</p>
                     </div>
                 </div>
             </div>
@@ -76,19 +83,33 @@
     <!-- Experience Section -->
     <section id="experience" class="section experience-section">
         <div class="container">
-            <h2 class="section-title">Expérience professionnelle</h2>
+            <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Mars 2024 - Présent</span>
-                        <h3>Développeur informatique</h3>
+                        <span class="timeline-date">March 2024 - Present</span>
+                        <h3>Software Developer</h3>
                         <h4>Arcantel SA · Full-time</h4>
-                        <p class="location">Neuchâtel, Suisse</p>
-                        <p>Développements web pour les différentes entreprises du canton tel que TransN, le SIEN et l'état de Neuchâtel.</p>
+                        <p class="location">Neuchâtel, Switzerland</p>
+                        <p>Web development for various companies in the canton such as TransN, SIEN, and the State of Neuchâtel.</p>
                         <div class="tags">
+                            <span class="tag">C#</span>
                             <span class="tag">.NET framework</span>
                             <span class="tag">Blazor</span>
+                            <span class="tag">MAUI</span>
+                            <span class="tag">AngularJS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Microsoft SQL Server</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">IIS</span>
+                            <span class="tag">TeamCity</span>
+                            <span class="tag">Tortoise SVN</span>
+                            <span class="tag">Fastlane</span>
+                            <span class="tag">iOS</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">PhpStorm</span>
                         </div>
                     </div>
                 </div>
@@ -96,25 +117,35 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Septembre 2024 - Présent</span>
+                        <span class="timeline-date">September 2024 - Present</span>
                         <h3>Active Team Member</h3>
                         <h4>Erasmus Student Network</h4>
-                        <p class="location">Neuchâtel, Suisse</p>
-                        <p>Membre actif de l'équipe ESN Neuchâtel depuis septembre 2024.</p>
+                        <p class="location">Neuchâtel, Switzerland</p>
+                        <p>Active team member of ESN Neuchâtel since September 2024.</p>
+                        <div class="tags">
+                            <span class="tag">Event Management</span>
+                            <span class="tag">Community Building</span>
+                            <span class="tag">Cross-cultural Communication</span>
+                            <span class="tag">Teamwork</span>
+                            <span class="tag">Volunteer Work</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Avril 2022 - Juillet 2022</span>
+                        <span class="timeline-date">April 2022 - July 2022</span>
                         <h3>Back End Developer</h3>
                         <h4>ESPRI Digital · Internship</h4>
                         <p class="location">Argentan, France</p>
-                        <p>Mise en place d'un système de backup de bases de données grâce à Kubernetes.</p>
+                        <p>Implementation of a database backup system using Kubernetes.</p>
                         <div class="tags">
                             <span class="tag">Kubernetes</span>
                             <span class="tag">Node.js</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Databases</span>
+                            <span class="tag">Back-End Web Development</span>
                         </div>
                     </div>
                 </div>
@@ -122,27 +153,28 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Septembre 2021 - Mars 2022</span>
+                        <span class="timeline-date">September 2021 - March 2022</span>
                         <h3>Frontend Developer</h3>
                         <h4>Axxone System · Internship</h4>
                         <p class="location">Lyon, France</p>
-                        <p>Refonte du site de la Mutuelle Générale de Prévoyance en Vue.js. Retravail de certaines parties de l'API en PHP.</p>
+                        <p>Redesign of the Mutuelle Générale de Prévoyance website in Vue.js. Reworked parts of the API in PHP.</p>
                         <div class="tags">
                             <span class="tag">Vue.js</span>
                             <span class="tag">UX</span>
                             <span class="tag">PHP</span>
                         </div>
+                        <a href="https://extranet.mgprev.fr/#/" target="_blank" class="project-link">View website →</a>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Juillet 2020 - Décembre 2020</span>
+                        <span class="timeline-date">July 2020 - December 2020</span>
                         <h3>Full Stack Developer</h3>
                         <h4>Axxone System · Internship</h4>
                         <p class="location">Lyon, France</p>
-                        <p>Création d'éléments en Vue.js et mise en place d'un système de recherche et d'indexation full-text avec Elasticsearch.</p>
+                        <p>Creation of Vue.js components and implementation of a full-text search and indexing system with Elasticsearch.</p>
                         <div class="tags">
                             <span class="tag">Vue.js</span>
                             <span class="tag">Elasticsearch</span>
@@ -156,13 +188,13 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <h2 class="section-title">Projets</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Erudia</h3>
-                    <span class="project-date">Avril 2022 - Février 2025</span>
-                    <p>Projet de fin d'études à Epitech réalisé avec 9 étudiants. Erudia est une plateforme innovante dédiée aux chercheurs, conçue pour faciliter la publication et la révision d'articles scientifiques.</p>
-                    <p>La plateforme permet aux chercheurs de faire relire leurs travaux de manière anonyme par leurs pairs et de les publier en ligne une fois validés, jouant ainsi le rôle d'une maison d'édition moderne.</p>
+                    <span class="project-date">April 2022 - February 2025</span>
+                    <p>Final year project at Epitech completed with 9 students. Erudia is an innovative platform dedicated to researchers, designed to facilitate the publication and review of scientific articles.</p>
+                    <p>The platform allows researchers to have their work reviewed anonymously by peers and publish it online once validated, acting as a modern publishing house.</p>
                     <div class="tags">
                         <span class="tag">Nuxt.js</span>
                         <span class="tag">Full-Stack</span>
@@ -171,15 +203,112 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>Site personnel</h3>
-                    <p>Site personnel réalisé avec Nuxt 3 pour démontrer mes compétences. Il fait office de CV en ligne et contient des informations sur mon parcours ainsi que mes contacts.</p>
-                    <p>Fonctionnalités : thème clair et sombre, support multilingue (français et anglais) avec i18n.</p>
+                    <h3>my_teams</h3>
+                    <p>This project involves creating a server running on your local machine and a client that can connect to this server. The client can then connect and send messages to other clients.</p>
+                    <p>It demonstrates the use of select, send, read, bind, and listen functions for network programming.</p>
                     <div class="tags">
-                        <span class="tag">Nuxt.js</span>
-                        <span class="tag">DNS</span>
-                        <span class="tag">i18n</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Network Programming</span>
+                        <span class="tag">Sockets</span>
+                        <span class="tag">Client-Server</span>
                     </div>
-                    <a href="https://www.michaud-developpement-informatique.fr/" target="_blank" class="project-link">Voir le site →</a>
+                    <a href="https://github.com/CubeLeopard5/my_teams" target="_blank" class="project-link">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Guichet Unique de Neuchâtel</h3>
+                    <span class="project-date">2024 - Present</span>
+                    <p>Working on the chancellery section of the Guichet Unique platform to implement electronic voting functionality for the citizens of the canton of Neuchâtel.</p>
+                    <p>This project contributes to strengthening democracy by making voting more accessible and secure for all citizens.</p>
+                    <div class="tags">
+                        <span class="tag">.NET</span>
+                        <span class="tag">e-Voting</span>
+                        <span class="tag">Government</span>
+                        <span class="tag">Democracy</span>
+                    </div>
+                    <a href="https://www.guichetunique.ch/" target="_blank" class="project-link">View website →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>GuMobile</h3>
+                    <span class="project-date">2024 - Present</span>
+                    <p>Mobile application for the Guichet Unique de Neuchâtel platform, providing citizens with easy access to government services on iOS and Android devices.</p>
+                    <p>The app allows users to manage administrative tasks, access public services, and stay connected with cantonal information directly from their smartphones.</p>
+                    <div class="tags">
+                        <span class="tag">.NET MAUI</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">Mobile Development</span>
+                        <span class="tag">Government Services</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://apps.apple.com/ch/app/guichet-unique/id1449990570" target="_blank" class="project-link">iOS App Store →</a>
+                        <a href="https://play.google.com/store/apps/details?id=ch.ne.gumobile&hl=fr_CH" target="_blank" class="project-link">Google Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Nemo News</h3>
+                    <p>Official mobile information system developed by the State and City of Neuchâtel in partnership with Arcantel, delivering news and announcements from public institutions directly to citizens' smartphones.</p>
+                    <p>The app features customizable news filtering by theme and publisher, push notifications for important updates, emergency alerts, geolocation services, and an emergency phone directory for the Neuchâtel region.</p>
+                    <div class="tags">
+                        <span class="tag">.NET MAUI</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">News Platform</span>
+                        <span class="tag">Public Information</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://apps.apple.com/ch/app/nemo-news/id1215309614" target="_blank" class="project-link">iOS App Store →</a>
+                        <a href="https://play.google.com/store/search?q=Nemo%20News&c=apps&hl=fr_CH" target="_blank" class="project-link">Google Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Nemo Wifi</h3>
+                    <p>Free public WiFi network initiative launched by the Canton of Neuchâtel, providing secure internet access across approximately 300 access points throughout the region.</p>
+                    <p>The service features a unified authentication system allowing users to connect at multiple locations with a single credential, SMS-based registration, and supports international phone numbers without collecting personal data.</p>
+                    <div class="tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">WiFi Network</span>
+                        <span class="tag">Authentication</span>
+                        <span class="tag">Public Service</span>
+                        <span class="tag">Infrastructure</span>
+                    </div>
+                    <a href="https://freewifi.ne.ch/projet-freewifine/acceder-a-freewifine" target="_blank" class="project-link">View service →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>TAS/CAS - Court of Arbitration for Sport</h3>
+                    <p>Participated in the redesign of the TAS/CAS main website and developed the new jurisprudence platform.</p>
+                    <p>The jurisprudence site provides comprehensive access to sports arbitration decisions and legal precedents.</p>
+                    <div class="tags">
+                        <span class="tag">.NET</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">Web Redesign</span>
+                        <span class="tag">Legal Platform</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.tas-cas.org/" target="_blank" class="project-link">Main website →</a>
+                        <a href="https://jurisprudence.tas-cas.org/" target="_blank" class="project-link">Jurisprudence →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>NEDAO</h3>
+                    <p>A participatory platform based in Neuchâtel that provides citizens, SMEs, and institutions with opportunities to experiment with emerging technologies and new governance models.</p>
+                    <p>The project explores blockchain-based governance systems, smart contracts, and decentralized autonomous organizations (DAOs) to discover and understand new paradigms in digital democracy and participatory decision-making.</p>
+                    <div class="tags">
+                        <span class="tag">Blockchain</span>
+                        <span class="tag">Smart Contracts</span>
+                        <span class="tag">DAO</span>
+                        <span class="tag">Governance</span>
+                        <span class="tag">Web3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://did.nedao.ch/" target="_blank" class="project-link">DID Portal →</a>
+                        <a href="https://www.nedao.ch/" target="_blank" class="project-link">Main website →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,13 +317,13 @@
     <!-- Education Section -->
     <section id="education" class="section education-section">
         <div class="container">
-            <h2 class="section-title">Formation</h2>
+            <h2 class="section-title">Education</h2>
             <div class="education-grid">
                 <div class="education-card">
                     <h3>EPITECH - European Institute of Technology</h3>
-                    <span class="education-date">Septembre 2019 - Août 2024</span>
-                    <p class="education-degree">Expert en technologies de l'information, Développement informatique</p>
-                    <p>Le Programme Grande Ecole est le cursus historique d'Epitech Technology. Formation en 5 ans pour devenir expert en informatique avec un contenu technique dense et évolutif, comprenant une diversité de projets de programmation et couvrant de nombreux langages.</p>
+                    <span class="education-date">September 2019 - August 2024</span>
+                    <p class="education-degree">Expert in Information Technology, Software Development</p>
+                    <p>The Grande Ecole Program is Epitech Technology's flagship curriculum. A 5-year program to become an IT expert with dense and progressive technical content, including a variety of programming projects covering numerous languages.</p>
                     <div class="tags">
                         <span class="tag">CPP</span>
                         <span class="tag">Docker</span>
@@ -204,10 +333,10 @@
 
                 <div class="education-card">
                     <h3>Dublin City University</h3>
-                    <span class="education-date">Septembre 2022 - Mai 2023</span>
-                    <p class="education-degree">Faculty of engineering and computing</p>
-                    <p class="location">Dublin, Irlande</p>
-                    <p>Quatrième année d'études à Dublin City University en Irlande. Cette expérience internationale m'a permis d'étendre mes connaissances en explorant une autre culture.</p>
+                    <span class="education-date">September 2022 - May 2023</span>
+                    <p class="education-degree">Faculty of Engineering and Computing</p>
+                    <p class="location">Dublin, Ireland</p>
+                    <p>Fourth year of studies at Dublin City University in Ireland. This international experience allowed me to expand my knowledge by exploring another culture.</p>
                 </div>
             </div>
         </div>
@@ -216,59 +345,84 @@
     <!-- Skills Section -->
     <section id="skills" class="section skills-section">
         <div class="container">
-            <h2 class="section-title">Compétences</h2>
+            <h2 class="section-title">Skills</h2>
 
             <div class="skills-category">
-                <h3>Technologies principales</h3>
+                <h3>.NET Ecosystem</h3>
                 <div class="skills-grid">
-                    <div class="skill-item">Nuxt / Vue.js</div>
-                    <div class="skill-item">Node.js / Express</div>
-                    <div class="skill-item">TypeScript</div>
-                    <div class="skill-item">.NET framework</div>
+                    <div class="skill-item">C#</div>
+                    <div class="skill-item">.NET Framework</div>
                     <div class="skill-item">Blazor</div>
-                    <div class="skill-item">API Restful</div>
-                    <div class="skill-item">HTML / CSS</div>
+                    <div class="skill-item">.NET MAUI</div>
+                    <div class="skill-item">ASP.NET Core</div>
                 </div>
             </div>
 
             <div class="skills-category">
-                <h3>Langages de programmation</h3>
+                <h3>Software Architecture & Patterns</h3>
                 <div class="skills-grid">
-                    <div class="skill-item">C++</div>
-                    <div class="skill-item">C</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">PHP</div>
+                    <div class="skill-item">Clean Architecture</div>
+                    <div class="skill-item">MediatR</div>
+                    <div class="skill-item">RESTful API</div>
                 </div>
             </div>
 
             <div class="skills-category">
-                <h3>Outils & DevOps</h3>
+                <h3>Mobile Development</h3>
                 <div class="skills-grid">
-                    <div class="skill-item">Docker</div>
-                    <div class="skill-item">Kubernetes</div>
-                    <div class="skill-item">Elasticsearch</div>
-                    <div class="skill-item">Bash</div>
+                    <div class="skill-item">.NET MAUI</div>
+                    <div class="skill-item">iOS Development</div>
+                    <div class="skill-item">Android Development</div>
                     <div class="skill-item">Fastlane</div>
                 </div>
             </div>
 
             <div class="skills-category">
-                <h3>Mobile & Autres</h3>
+                <h3>Frontend Technologies</h3>
                 <div class="skills-grid">
-                    <div class="skill-item">iOS Development</div>
-                    <div class="skill-item">Android Development</div>
-                    <div class="skill-item">i18n</div>
+                    <div class="skill-item">Angular</div>
+                    <div class="skill-item">Vue.js</div>
+                    <div class="skill-item">TypeScript</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">HTML / CSS</div>
                 </div>
             </div>
 
             <div class="skills-category">
-                <h3>Langues</h3>
+                <h3>Databases</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Microsoft SQL Server</div>
+                    <div class="skill-item">MySQL</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>DevOps & Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">TeamCity</div>
+                    <div class="skill-item">Git / SVN</div>
+                    <div class="skill-item">IIS</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Other Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">PHP</div>
+                    <div class="skill-item">C / C++</div>
+                    <div class="skill-item">Blockchain</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Languages</h3>
                 <div class="languages">
                     <div class="language-item">
-                        <strong>Français</strong> - Langue maternelle
+                        <strong>French</strong> - Native
                     </div>
                     <div class="language-item">
-                        <strong>Anglais</strong> - Professionnel
+                        <strong>English</strong> - Professional
                     </div>
                 </div>
             </div>
@@ -280,17 +434,15 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="contact-content">
-                <p class="contact-text">Je suis toujours à la recherche de nouvelles collaborations afin d'apporter mon expertise à vos projets.</p>
-                <p class="contact-text">N'hésitez pas à me contacter pour discuter de vos besoins.</p>
+                <p class="contact-text">I am always looking for new collaborations to bring my expertise to your projects.</p>
+                <p class="contact-text">Feel free to contact me to discuss your needs.</p>
 
                 <div class="contact-links">
                     <a href="https://www.linkedin.com/in/adrienmichaud/" target="_blank" class="contact-link">
-                        <span class="contact-icon">in</span>
                         LinkedIn
                     </a>
-                    <a href="https://www.michaud-developpement-informatique.fr/" target="_blank" class="contact-link">
-                        <span class="contact-icon">🌐</span>
-                        Site personnel
+                    <a href="mailto:michaudadrien78@gmail.com" class="contact-link">
+                        michaudadrien78@gmail.com
                     </a>
                 </div>
             </div>
@@ -300,8 +452,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Adrien Michaud. Tous droits réservés.</p>
-            <p>Développeur .NET & Full Stack basé à Neuchâtel, Switzerland</p>
+            <p>&copy; 2025 Adrien Michaud. All rights reserved.</p>
+            <p>.NET & Full Stack Developer based in Neuchâtel, Switzerland</p>
         </div>
     </footer>
 
@@ -339,6 +491,32 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 </body>
