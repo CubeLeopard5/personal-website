@@ -283,16 +283,27 @@ p {
 
 .hero-location {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     opacity: 0.85;
     animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease 0.5s backwards;
 }
 
 .hero-cta {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    animation: fadeInUp 1s ease 0.6s backwards;
+    animation: fadeInUp 1s ease 0.7s backwards;
 }
 
 .hero-cta .btn {
@@ -883,6 +894,11 @@ p {
 
     .hero-location {
         font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        padding: 0 1rem;
     }
 
     .hero-cta {
