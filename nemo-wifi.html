@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nemo Wifi / FREEWIFI.ne - Free public WiFi network for the canton of Neuchâtel. Developed by Adrien Michaud using PHP for secure authentication and network management.">
+    <meta name="keywords" content="Nemo Wifi, FREEWIFI.ne, Public WiFi, Neuchâtel, Switzerland, PHP, Network Infrastructure, SMS Authentication, Public Service">
+    <meta name="author" content="Adrien Michaud">
+    <title>Nemo Wifi - Free Public WiFi Network | Adrien Michaud</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">AM</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#projects" class="nav-link">All Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <h1 class="project-title">Nemo Wifi</h1>
+            <p class="project-tagline">Free Public WiFi Network for Canton Neuchâtel</p>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Overview Section -->
+            <section class="content-section">
+                <h2>Project Overview</h2>
+                <p>Nemo Wifi, now known as FREEWIFI.ne, is a free public WiFi network initiative launched by the Canton of Neuchâtel in 2015. I worked on the authentication system and network management platform, providing secure internet access across approximately 300 access points throughout the region.</p>
+                <p>This public-private partnership project demonstrates how technology can bridge the digital divide and provide essential internet connectivity to citizens, tourists, and digital nomads across the canton.</p>
+            </section>
+
+            <!-- About FREEWIFI.ne -->
+            <section class="content-section">
+                <h2>About FREEWIFI.ne</h2>
+                <p>FREEWIFI.ne represents one of Switzerland's most ambitious public WiFi initiatives, providing free, secure internet access across the canton of Neuchâtel. The service is the result of a public-private partnership involving the Canton of Neuchâtel, municipalities, and private partners including Arcantel SA and Groupe E.</p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <h3>Extensive Coverage</h3>
+                        <p>Over 300 access points distributed throughout the canton, covering public squares, cultural institutions, hospitals, health facilities, and other public spaces in cities like Neuchâtel and La Chaux-de-Fonds.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Unified Access</h3>
+                        <p>Single authentication credential valid across all 300+ access points. Once registered, users can seamlessly connect to FREEWIFI.ne throughout the canton without re-authenticating at each location.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Privacy-Focused</h3>
+                        <p>The system stores only phone numbers for SMS authentication - no names, addresses, or personal data. This minimal data retention approach respects user privacy while providing secure network access.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="content-section">
+                <h2>Technical Implementation</h2>
+                <p>The authentication and network management platform is built with PHP, focusing on security, scalability, and ease of use. The system handles user registration, SMS-based authentication, and manages connections across the distributed network infrastructure.</p>
+
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <h3>SMS Authentication System</h3>
+                        <p>Developed a secure SMS-based authentication flow where users register with their phone number, receive a verification code via SMS, and use that credential to access the network. The system supports both Swiss and international phone numbers, making the service accessible to tourists visiting the region.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Distributed Network Management</h3>
+                        <p>Managing 300+ access points across the canton required robust infrastructure monitoring and load balancing. The platform tracks connection status, network health, and usage patterns while ensuring consistent service quality across all locations.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Privacy & Compliance</h3>
+                        <p>The system was designed with privacy as a core principle, minimizing data collection to only what's necessary for authentication (phone numbers). All technical implementations comply with Swiss federal telecommunications laws and data protection regulations, with limited data sharing restricted to legal requirements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact Section -->
+            <section class="content-section">
+                <h2>Impact & Community Benefits</h2>
+                <p>FREEWIFI.ne serves thousands of users across the canton, from residents accessing internet in public spaces to tourists staying connected while exploring the region. By providing free, secure WiFi access, the initiative promotes digital inclusion and supports economic activity in public areas.</p>
+
+                <div class="impact-stats">
+                    <div class="stat-item">
+                        <h3>Digital Inclusion</h3>
+                        <p>Free internet access reduces the digital divide, ensuring all citizens and visitors can access online services, education, and information regardless of their economic situation.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Tourism Support</h3>
+                        <p>International tourists can easily stay connected throughout their visit without expensive roaming charges, improving the visitor experience and promoting the canton as a connected, modern destination.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Public-Private Partnership Model</h3>
+                        <p>FREEWIFI.ne demonstrates how government entities and private companies can collaborate effectively to provide essential public services, creating shared value for the entire community.</p>
+                    </div>
+                </div>
+
+                <p class="section-conclusion">This project showcases how thoughtful technical implementation can deliver real social impact, making internet connectivity a public good accessible to everyone in the canton.</p>
+            </section>
+
+            <!-- Links Section -->
+            <section class="content-section">
+                <h2>Learn More</h2>
+                <div class="project-links">
+                    <a href="https://freewifi.ne.ch/projet-freewifine/acceder-a-freewifine" target="_blank" class="project-link">Visit FREEWIFI.ne →</a>
+                    <a href="https://www.ne.ch/medias/Pages/20210601_FREEWIFI.aspx" target="_blank" class="project-link">Canton Announcement →</a>
+                    <a href="index.html#contact" class="project-link">Contact Me →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Adrien Michaud. All rights reserved.</p>
+            <p>.NET & Full Stack Developer based in Neuchâtel, Switzerland</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
