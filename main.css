@@ -1,4 +1,16 @@
 /* ===================================
+   Fonts (self-hosted Inter, variable)
+   =================================== */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('fonts/inter-variable.woff2') format('woff2');
+}
+
+/* ===================================
    Reset & Base Styles
    =================================== */
 
@@ -635,7 +647,8 @@ p {
 
 .education-date {
     display: inline-block;
-    color: var(--primary-color);
+    /* primary-dark to clear WCAG AA 4.5:1 on the light tinted bg */
+    color: var(--primary-dark);
     font-size: 0.9rem;
     font-weight: var(--font-weight-semibold);
     margin-bottom: 1rem;
