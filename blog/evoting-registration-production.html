@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neuchâtel reintroduces electronic voting in November 2026. A high-level look at building the e-voting registration services for the Guichet Unique platform.">
+    <meta name="keywords" content="E-Voting, Vote électronique, Neuchâtel, Guichet Unique, eCH standards, Swiss Post, Digital Democracy, .NET">
+    <meta name="author" content="Adrien Michaud">
+    <title>Bringing E-Voting Registration to Production | Adrien Michaud</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="blog-post-header">
+        <div class="container">
+            <h1 class="blog-post-title">Bringing E-Voting Registration to Production</h1>
+            <div class="blog-post-meta">
+                <span class="blog-date">June 18, 2026</span>
+                <div class="blog-tags">
+                    <span class="blog-tag">E-Voting</span>
+                    <span class="blog-tag">Government</span>
+                    <span class="blog-tag">.NET</span>
+                    <span class="blog-tag">Neuchâtel</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <main class="blog-post-content">
+        <div class="container">
+            <a href="../blog.html" class="blog-back-link">← Back to Blog</a>
+
+            <p>
+                After years of preparation, the canton of Neuchâtel is reintroducing electronic voting,
+                with a rollout planned from November 2026. For me this milestone is a special one: I built
+                the citizen <strong>registration services</strong> that let voters opt in to the electronic
+                channel on the Guichet Unique platform. In this article I want to share, at a high level,
+                what that work involved and why Switzerland's approach to e-voting makes it such an
+                interesting engineering challenge.
+            </p>
+
+            <h2>Why E-Voting in Switzerland Is Different</h2>
+
+            <p>
+                Switzerland votes more often than almost any other country, and a large share of citizens
+                already vote by post. Electronic voting is offered as an additional, optional channel —
+                never a replacement. Since the revised federal ordinances came into force in 2022, only
+                <strong>fully verifiable systems</strong> are allowed: a voter can check that their vote was
+                recorded as intended, and observers can verify that all votes were counted correctly, all
+                without breaking vote secrecy.
+            </p>
+
+            <p>
+                That bar shapes everything. The work is less about clever features and more about
+                correctness, traceability, and respecting a framework designed around trust in the
+                democratic process.
+            </p>
+
+            <h2>Where Registration Fits In</h2>
+
+            <p>
+                Before anyone can vote electronically, the canton needs a reliable way to manage who is
+                eligible and who has chosen to use the channel. That is the part I worked on. At a high
+                level, the registration services cover:
+            </p>
+
+            <ul>
+                <li>A citizen-facing registration page where eligible voters can sign up for the electronic channel — verifying their voting rights along the way.</li>
+                <li>An opt-out flow that records the reason a citizen gives when they choose to unregister.</li>
+                <li>An administration page for canton staff to manage the list of citizens registered for e-voting.</li>
+            </ul>
+
+            <p>
+                The goal throughout was a workflow that administrators can trust and that holds up to the
+                scrutiny a democratic system deserves.
+            </p>
+
+            <h2>Built on eCH Standards</h2>
+
+            <p>
+                A lot of the rigor comes from the <strong>eCH standards</strong>, the official Swiss
+                e-government standards that guarantee interoperability between municipal, cantonal, and
+                federal systems. Working within these standards (for example those covering voter and
+                election registers, and political-rights data) means the platform speaks the same language
+                as the rest of the Swiss e-government ecosystem, rather than inventing its own formats.
+            </p>
+
+            <p>
+                In practice, this keeps data consistent across systems and makes the whole process easier
+                to verify — which is exactly the point.
+            </p>
+
+            <h2>From Project to Production</h2>
+
+            <p>
+                Moving from a working system to one that real citizens depend on is a step up: it means
+                careful testing, documentation, and close collaboration with the cantonal IT services to
+                make sure every requirement is met. Seeing that effort culminate in a production rollout
+                for an actual vote is genuinely rewarding.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Contributing to e-voting in Neuchâtel has been one of the most meaningful projects of my
+                career so far — a place where careful engineering directly supports democratic
+                participation, making voting more accessible for citizens abroad, people with reduced
+                mobility, and anyone who values the option. I'm looking forward to seeing the channel in
+                action from November 2026.
+            </p>
+
+            <p>
+                For the official context, see the
+                <a href="https://www.ne.ch/communiques-de-presse/le-canton-de-neuchatel-reintroduit-le-vote-electronique" target="_blank" rel="noopener">canton of Neuchâtel's press release</a>
+                and this
+                <a href="https://www.rts.ch/info/regions/neuchatel/2026/article/neuchatel-reintroduit-le-vote-electronique-des-novembre-2026-29276122.html" target="_blank" rel="noopener">RTS news report</a>.
+                You can also read more about the platform on my
+                <a href="../guichet-unique.html">Guichet Unique project page</a>.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. All rights reserved.</p>
+            <p>.NET & Full Stack Developer based in Neuchâtel, Switzerland</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

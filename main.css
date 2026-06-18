@@ -20,6 +20,9 @@
     --border-color: #e2e8f0;
     --accent: #0ea5e9;
 
+    /* Hero gradient (shared by hero / project / blog headers) */
+    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
     /* Spacing */
     --section-padding: 80px 20px;
     --container-max-width: 1200px;
@@ -235,7 +238,7 @@ p {
    =================================== */
 
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-hero);
     color: white;
     min-height: 100vh;
     display: flex;
@@ -737,7 +740,8 @@ p {
     display: inline-block;
     padding: 0.4rem 0.8rem;
     background-color: rgba(37, 99, 235, 0.1);
-    color: var(--primary-color);
+    /* primary-dark (not primary) to clear WCAG AA 4.5:1 on the light tag bg */
+    color: var(--primary-dark);
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: var(--font-weight-medium);
@@ -748,7 +752,7 @@ p {
    =================================== */
 
 .contact-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-hero);
     color: white;
 }
 
@@ -971,7 +975,7 @@ p {
    =================================== */
 
 .project-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-hero);
     color: white;
     padding: 120px 20px 80px;
     position: relative;
@@ -1224,7 +1228,7 @@ p {
    =================================== */
 
 .blog-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-hero);
     color: white;
     padding: 100px 20px 60px;
     text-align: center;
@@ -1359,7 +1363,7 @@ p {
 
 /* Blog Post Page */
 .blog-post-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-hero);
     color: white;
     padding: 120px 20px 80px;
 }
@@ -1380,6 +1384,12 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     opacity: 0.95;
+}
+
+/* The date reuses .blog-date (dark grey, for white cards); on the blue
+   post header it must be light to stay legible. */
+.blog-post-meta .blog-date {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .blog-post-content {
