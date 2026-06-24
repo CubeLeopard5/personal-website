@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Building Neuchâtel's street harassment reporting platform on the Guichet Unique — a high-level look at delivering a public-service tool that lets citizens report harassment in public spaces, anonymously or with follow-up.">
+    <meta name="keywords" content="Street Harassment, Signalement, Guichet Unique, Public Service, Neuchâtel, Government, Civic Tech, Switzerland">
+    <meta name="author" content="Adrien Michaud">
+    <title>Building a Street Harassment Reporting Platform | Adrien Michaud</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="blog-post-header">
+        <div class="container">
+            <h1 class="blog-post-title">Building a Street Harassment Reporting Platform</h1>
+            <div class="blog-post-meta">
+                <span class="blog-date">June 24, 2026</span>
+                <div class="blog-tags">
+                    <span class="blog-tag">Guichet Unique</span>
+                    <span class="blog-tag">Public Service</span>
+                    <span class="blog-tag">Civic Tech</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <main class="blog-post-content">
+        <div class="container">
+            <a href="../blog.html" class="blog-back-link">← Back to Blog</a>
+
+            <p>
+                In May 2026, the Canton of Neuchâtel launched a new public-service tool: a platform that
+                lets people report situations of street harassment. It was built on the
+                <strong>Guichet Unique</strong> — the canton's single-window online service — and delivered
+                together with the Neuchâtel Police and the cantonal IT service. I had the chance to develop
+                this deliverable, and I wanted to share, at a high level, what it does and why building this
+                kind of tool is a little different from a typical feature.
+            </p>
+
+            <h2>What the Platform Does</h2>
+
+            <p>
+                Street harassment — persistent unwanted remarks, intrusive behaviour, sexist or intimidating
+                conduct in public spaces — often goes unreported. Filing a formal police complaint can feel
+                like a high bar for something that happened in a few seconds on the street, so a lot of it
+                simply never gets recorded. The goal of the platform is to lower that bar.
+            </p>
+
+            <p>
+                Through the Guichet Unique portal and the mobile apps, anyone can describe a situation they
+                experienced or witnessed. Two paths are offered:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Anonymous reports</strong> — for people who want to document what happened
+                    without leaving any contact details.
+                </li>
+                <li>
+                    <strong>Reports with contact information</strong> — for people open to a follow-up, where
+                    the police commit to getting back in touch within a few days.
+                </li>
+            </ul>
+
+            <p>
+                Importantly, the platform <em>supplements</em> rather than replaces the formal channels: it is
+                not a substitute for a police complaint, and emergencies still go through the emergency line.
+                That distinction had to be communicated clearly inside the tool itself.
+            </p>
+
+            <h2>Why This One Was Different</h2>
+
+            <p>
+                Most features you build are measured in clicks and conversion. This one is measured in trust.
+                When someone opens a form to report something that may have shaken them, a few things matter
+                more than usual:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Clarity over cleverness.</strong> The flow has to be calm, short, and
+                    unambiguous about what happens to the information — especially the difference between an
+                    anonymous report and one that invites a response.
+                </li>
+                <li>
+                    <strong>Respecting the choice to stay anonymous.</strong> If a person chooses not to
+                    identify themselves, that choice has to be honoured end to end, by design.
+                </li>
+                <li>
+                    <strong>Treating sensitive accounts with care.</strong> Reports describe real, often
+                    difficult experiences. Handling that data responsibly is the whole point of doing this on
+                    an official cantonal platform rather than an ad-hoc form.
+                </li>
+            </ul>
+
+            <p>
+                None of that is glamorous engineering, and that is exactly why it deserves attention. The
+                hardest part of a civic tool like this isn't the technology — it's making something that feels
+                safe enough that people actually use it.
+            </p>
+
+            <h2>Part of a Bigger Picture</h2>
+
+            <p>
+                The reports don't just sit in a database. Aggregated and anonymised, they help the authorities
+                see <em>where</em> and <em>how</em> harassment happens, which in turn informs prevention work
+                and how resources are deployed. The launch was paired with a public awareness campaign placing
+                QR codes in public spaces, turning a physical place where something happened into a direct
+                entry point to report it.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Delivering this platform was a reminder that public-service software is at its best when it
+                disappears: a simple, trustworthy way to be heard, backed by the seriousness of an official
+                channel. It's a small piece of code in the grand scheme of things, but one I'm genuinely proud
+                to have built.
+            </p>
+
+            <p>
+                You can read more about the wider platform on the
+                <a href="../guichet-unique.html">Guichet Unique project page</a>, and find the app on the
+                <a href="https://apps.apple.com/ch/app/guichet-unique/id1449990570" target="_blank" rel="noopener">App Store</a>
+                and
+                <a href="https://play.google.com/store/apps/details?id=ch.ne.gumobile&hl=fr_CH" target="_blank" rel="noopener">Google Play</a>.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. All rights reserved.</p>
+            <p>.NET & Full Stack Developer based in Neuchâtel, Switzerland</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
