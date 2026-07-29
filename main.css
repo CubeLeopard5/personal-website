@@ -360,6 +360,9 @@ p {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    /* Si la rangée ne tient pas, les boutons passent à la ligne entiers
+       plutôt que de se comprimer et de couper leur libellé. */
+    flex-wrap: wrap;
     animation: fadeInUp 1s ease 0.7s backwards;
 }
 
@@ -394,6 +397,10 @@ p {
     transition: var(--transition);
     text-align: center;
     border: 2px solid transparent;
+    /* Un bouton flex se rétrécit sous sa largeur de contenu par défaut :
+       sans ceci, « Télécharger le CV » se coupe en deux lignes et décale
+       la hauteur des deux autres. */
+    white-space: nowrap;
 }
 
 .btn-primary {
