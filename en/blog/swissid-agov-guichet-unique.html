@@ -130,8 +130,11 @@
             <h2>Bringing Them into a MAUI App</h2>
 
             <p>
-                The Guichet Unique mobile app (GuMobile) is built with <strong>.NET MAUI</strong>, so the
-                integration had to work cleanly across both iOS and Android from a single codebase.
+                The Guichet Unique mobile app (GuMobile) is built with <strong>.NET MAUI</strong>, but it is
+                not a native re-implementation of the platform: it is a MAUI shell that hosts the canton's
+                web services in a WebView, with the native layer taking care of what the web cannot —
+                sign-in included. The integration therefore had to work cleanly on iOS and Android from a
+                single codebase.
             </p>
 
             <p>
@@ -144,12 +147,24 @@
             </p>
 
             <p>
+                Authentication deliberately does not go through that WebView. Signing in with an
+                <strong>INR</strong> — a recognised digital identity, such as SwissID or AGOV — hands off to
+                the system browser instead: an <strong>Auth Tab</strong> on Android, an
+                <strong>ASWebAuthenticationSession</strong> on iOS. This is the pattern
+                <a href="https://datatracker.ietf.org/doc/html/rfc8252" target="_blank" rel="noopener">RFC 8252</a>
+                asks for in native apps, and the reason is exactly the second point below: an embedded
+                WebView is driven by the app, which could therefore read what the user types into it, whereas
+                these sessions are opaque to it. They also share the system's cookie jar, so a citizen
+                already signed in on their phone often has nothing to type at all.
+            </p>
+
+            <p>
                 Without going into sensitive specifics, the work rested on a few familiar pillars of modern
                 authentication:
             </p>
 
             <ul>
-                <li>Standard OpenID Connect sign-in flows that hand authentication off to the provider and bring the user safely back to the app.</li>
+                <li>Standard OpenID Connect flows end to end, with no bespoke authentication code in the app.</li>
                 <li>No user credentials kept in the app at all — authentication is fully delegated to the identity provider, so passwords no longer live on the device.</li>
                 <li>A consistent, trustworthy login experience whichever provider the citizen chooses.</li>
             </ul>

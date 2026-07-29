@@ -135,9 +135,11 @@
             <h2>Les intégrer dans une application MAUI</h2>
 
             <p>
-                L'application mobile du Guichet Unique (GuMobile) est développée en <strong>.NET MAUI</strong> :
-                l'intégration devait donc fonctionner proprement sur iOS comme sur Android, à partir d'une
-                seule base de code.
+                L'application mobile du Guichet Unique (GuMobile) est développée en <strong>.NET MAUI</strong>,
+                mais ce n'est pas une réécriture native de la plateforme : c'est une coque MAUI qui héberge
+                les prestations web du canton dans une WebView, la couche native prenant en charge ce que le
+                web ne peut pas faire — la connexion comprise. L'intégration devait donc fonctionner
+                proprement sur iOS comme sur Android, à partir d'une seule base de code.
             </p>
 
             <p>
@@ -151,12 +153,25 @@
             </p>
 
             <p>
+                L'authentification, elle, ne passe volontairement pas par cette WebView. Se connecter avec
+                une <strong>INR</strong> — une identité numérique reconnue, comme SwissID ou AGOV — bascule
+                vers le navigateur du système : un <strong>Auth Tab</strong> sur Android, une
+                <strong>ASWebAuthenticationSession</strong> sur iOS. C'est le schéma que demande la
+                <a href="https://datatracker.ietf.org/doc/html/rfc8252" target="_blank" rel="noopener">RFC 8252</a>
+                pour les applications natives, et la raison tient exactement dans le deuxième point
+                ci-dessous : une WebView embarquée est pilotée par l'application, qui pourrait donc lire ce
+                que l'utilisateur y saisit, alors que ces sessions lui sont opaques. Elles partagent en outre
+                les cookies du système : un citoyen déjà connecté sur son téléphone n'a souvent rien à saisir
+                du tout.
+            </p>
+
+            <p>
                 Sans entrer dans des détails sensibles, le travail s'est appuyé sur quelques piliers
                 classiques de l'authentification moderne :
             </p>
 
             <ul>
-                <li>Des parcours de connexion OpenID Connect standard, qui confient l'authentification au fournisseur d'identité et ramènent l'utilisateur dans l'application en toute sécurité.</li>
+                <li>Des parcours OpenID Connect standard de bout en bout, sans code d'authentification maison dans l'application.</li>
                 <li>Aucun identifiant conservé dans l'application : l'authentification est entièrement déléguée au fournisseur d'identité, les mots de passe ne résident donc plus sur l'appareil.</li>
                 <li>Une expérience de connexion cohérente et digne de confiance, quel que soit le fournisseur choisi par le citoyen.</li>
             </ul>
