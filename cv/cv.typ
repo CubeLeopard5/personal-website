@@ -27,11 +27,12 @@
       langs: "Langues",
     ),
     profile: [
-      Je développe des applications web et mobiles pour des institutions publiques
-      suisses — un domaine où le logiciel doit fonctionner pour tout le monde et
-      résister à un examen extérieur. J'ai construit les services d'inscription des
-      citoyens pour la plateforme de vote électronique du canton de Neuchâtel, où le
-      droit fédéral n'autorise que les systèmes entièrement vérifiables.
+      Je développe des applications web et mobiles *en .NET* pour des institutions
+      publiques suisses — Blazor côté web, .NET MAUI côté mobile. Un domaine où le
+      logiciel doit fonctionner pour tout le monde et résister à un examen extérieur :
+      j'ai construit les services d'inscription des citoyens pour la plateforme de
+      vote électronique du canton de Neuchâtel, où le droit fédéral n'autorise que
+      les systèmes entièrement vérifiables.
     ],
     jobs: (
       (
@@ -110,10 +111,11 @@
       langs: "Languages",
     ),
     profile: [
-      I build web and mobile applications for Swiss public institutions — a domain
-      where software has to work for everyone and hold up to outside scrutiny. I built
-      the citizen registration services for the canton of Neuchâtel's e-voting
-      platform, where federal law permits only fully verifiable systems.
+      I build web and mobile applications *in .NET* for Swiss public institutions —
+      Blazor on the web, .NET MAUI on mobile. A domain where software has to work for
+      everyone and hold up to outside scrutiny: I built the citizen registration
+      services for the canton of Neuchâtel's e-voting platform, where federal law
+      permits only fully verifiable systems.
     ],
     jobs: (
       (
@@ -225,6 +227,22 @@
 #head(d.heads.profile)
 #d.profile
 
+// Les competences passent avant l'experience : un recruteur .NET cherche
+// d'abord si la pile correspond, et cette reponse doit tenir dans le premier
+// tiers de la page.
+#head(d.heads.skills)
+#for (label, items) in d.skills {
+  grid(columns: (34mm, 1fr), column-gutter: 4mm,
+    text(weight: 600, fill: INK, label),
+    items,
+  )
+  v(2.5pt)
+}
+#grid(columns: (34mm, 1fr), column-gutter: 4mm,
+  text(weight: 600, fill: INK, d.heads.langs),
+  d.langs.map(l => l.at(0) + " (" + l.at(1) + ")").join(" · "),
+)
+
 #head(d.heads.xp)
 // Une entree ne se coupe jamais entre deux pages : un intitule de poste
 // orphelin en bas de page est le defaut le plus visible d'un CV.
@@ -264,16 +282,3 @@
   })
 }
 
-#head(d.heads.skills)
-#for (label, items) in d.skills {
-  grid(columns: (34mm, 1fr), column-gutter: 4mm,
-    text(weight: 600, fill: INK, label),
-    items,
-  )
-  v(2.5pt)
-}
-
-#grid(columns: (34mm, 1fr), column-gutter: 4mm,
-  text(weight: 600, fill: INK, d.heads.langs),
-  d.langs.map(l => l.at(0) + " (" + l.at(1) + ")").join(" · "),
-)
