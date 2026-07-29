@@ -51,6 +51,28 @@ and leave it out of `sitemap.xml` until its content matches its folder's
 language. Set `<html lang="...">` to the language actually written on the page,
 not the folder it sits in — a screen reader trusts that attribute.
 
+## The CV
+
+`cv/cv.typ` builds both PDFs from one template. Both languages live in the same
+`DATA` dictionary, so a section added on one side and forgotten on the other is
+visible at a glance. Rebuild after any edit:
+
+```sh
+typst compile --root . --input lang=fr cv/cv.typ fr/cv-adrien-michaud.pdf
+typst compile --root . --input lang=en cv/cv.typ en/cv-adrien-michaud.pdf
+```
+
+`--root .` is required: the template reads `/images/adrien-michaud.jpg`, and
+Typst refuses to read outside the root it is given.
+
+The PDFs are committed, because Vercel serves the repository as-is and does not
+run Typst. Each language's page links to its own file, and the `download`
+attribute renames it on the way out, so the visitor gets
+`Adrien-Michaud-CV-FR.pdf` rather than a name that says nothing.
+
+Keep it to one page. The layout is tuned so it just fits; adding a paragraph
+will silently push a nearly-empty second page, which reads as a mistake.
+
 ## Adding a blog post
 
 ### 1. Create the file
