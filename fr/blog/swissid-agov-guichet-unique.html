@@ -41,6 +41,7 @@
       "headline": "Connecter l'application Guichet Unique à SwissID et AGOV",
       "description": "Ajouter la connexion SwissID et AGOV à l'application mobile Guichet Unique : ce que sont ces identités numériques suisses reconnues et ce qu'il faut pour les intégrer dans une application .NET MAUI.",
       "datePublished": "2026-06-18",
+      "dateModified": "2026-07-29",
       "inLanguage": "fr",
       "author": { "@type": "Person", "name": "Adrien Michaud", "url": "https://www.michaud-developpement-informatique.fr/fr/" },
       "publisher": { "@type": "Person", "name": "Adrien Michaud" },
@@ -136,12 +137,24 @@
             <p>
                 L'application mobile du Guichet Unique (GuMobile) est développée en <strong>.NET MAUI</strong> :
                 l'intégration devait donc fonctionner proprement sur iOS comme sur Android, à partir d'une
-                seule base de code. Sans entrer dans des détails sensibles, le travail s'est articulé autour
-                de quelques piliers classiques de l'authentification moderne :
+                seule base de code.
+            </p>
+
+            <p>
+                L'application ne dialogue pas directement avec SwissID et AGOV. Les deux se trouvent derrière
+                un <strong>serveur de fédération d'identité OpenID Connect</strong>, et l'application
+                s'intègre à ce seul interlocuteur. C'est ce qui rend le troisième point ci-dessous vrai
+                plutôt que simplement souhaitable : ajouter un fournisseur, ou modifier le comportement de
+                l'un d'eux, est un travail pour la couche de fédération et non pour l'application.
+            </p>
+
+            <p>
+                Sans entrer dans des détails sensibles, le travail s'est appuyé sur quelques piliers
+                classiques de l'authentification moderne :
             </p>
 
             <ul>
-                <li>Des parcours de connexion fondés sur les standards, qui confient l'authentification au fournisseur d'identité et ramènent l'utilisateur dans l'application en toute sécurité.</li>
+                <li>Des parcours de connexion OpenID Connect standard, qui confient l'authentification au fournisseur d'identité et ramènent l'utilisateur dans l'application en toute sécurité.</li>
                 <li>Aucun identifiant conservé dans l'application : l'authentification est entièrement déléguée au fournisseur d'identité, les mots de passe ne résident donc plus sur l'appareil.</li>
                 <li>Une expérience de connexion cohérente et digne de confiance, quel que soit le fournisseur choisi par le citoyen.</li>
             </ul>
