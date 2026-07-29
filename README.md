@@ -53,9 +53,16 @@ not the folder it sits in — a screen reader trusts that attribute.
 
 ## The CV
 
-`cv/cv.typ` builds both PDFs from one template. Both languages live in the same
-`DATA` dictionary, so a section added on one side and forgotten on the other is
-visible at a glance. Rebuild after any edit:
+`cv/data.typ` holds the content — both languages in one `DATA` dictionary, so a
+section added on one side and forgotten on the other is visible at a glance.
+Two layouts read from it:
+
+- `cv/cv.typ` — single column, sober. This is the one currently deployed.
+- `cv/cv-canvas.typ` — tinted sidebar carrying the site's hero gradient, with
+  photo, contact and skills in the band. The gradient is a darkened version of
+  the site's: white on the original `#667eea` only reaches 3.6:1.
+
+Edit content in `data.typ`, never in a layout. Rebuild after any edit:
 
 ```sh
 typst compile --root . --input lang=fr cv/cv.typ fr/cv-adrien-michaud.pdf
