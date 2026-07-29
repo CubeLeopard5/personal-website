@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le blog d'Adrien Michaud - Regards sur le développement .NET, l'architecture logicielle, le vote électronique et la transformation numérique du secteur public.">
+    <meta name="keywords" content="Blog, .NET, Développement logiciel, Clean Architecture, Vote électronique, Services publics, Blazor, MAUI">
+    <meta name="author" content="Adrien Michaud">
+    <title>Blog | Adrien Michaud</title>
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/fr/blog/">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/blog/">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/blog/">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/blog/">
+
+    <!-- Open Graph / partage social -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="Blog — Adrien Michaud">
+    <meta property="og:description" content="Le blog d'Adrien Michaud - Regards sur le développement .NET, l'architecture logicielle, le vote électronique et la transformation numérique du secteur public.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/fr/blog/">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — Adrien Michaud">
+    <meta name="twitter:description" content="Le blog d'Adrien Michaud - Regards sur le développement .NET, l'architecture logicielle, le vote électronique et la transformation numérique du secteur public.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Expérience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projets</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Compétences</a></li>
+                <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../en/blog/index.html" class="nav-link" hreflang="en" lang="en">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête du blog -->
+    <header class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">Blog</h1>
+            <p class="blog-subtitle">Réflexions sur le développement logiciel, l'architecture et la transformation numérique</p>
+        </div>
+    </header>
+
+    <!-- Articles -->
+    <main class="blog-content">
+        <div class="container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-date">24 juin 2026</span>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Guichet Unique</span>
+                            <span class="blog-tag">Service public</span>
+                            <span class="blog-tag">Civic tech</span>
+                        </div>
+                    </div>
+                    <h2 class="blog-card-title">
+                        <a href="street-harassment-reporting-platform.html">Construire une plateforme de signalement du harcèlement de rue</a>
+                    </h2>
+                    <p class="blog-card-excerpt">
+                        Neuchâtel a lancé une plateforme permettant aux citoyens de signaler le harcèlement de rue, bâtie sur le Guichet Unique. Un regard d'ensemble sur la livraison d'un outil de service public où la confiance — anonymat, clarté, soin apporté à des signalements sensibles — compte davantage que le code.
+                    </p>
+                    <a href="street-harassment-reporting-platform.html" class="blog-read-more">Lire la suite →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-date">18 juin 2026</span>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Vote électronique</span>
+                            <span class="blog-tag">Secteur public</span>
+                            <span class="blog-tag">.NET</span>
+                        </div>
+                    </div>
+                    <h2 class="blog-card-title">
+                        <a href="evoting-registration-production.html">Mettre en production l'inscription au vote électronique</a>
+                    </h2>
+                    <p class="blog-card-excerpt">
+                        Neuchâtel réintroduit le vote électronique en novembre 2026. Un regard d'ensemble sur la construction des services d'inscription des citoyens qui le rendent possible, et sur ce qui fait de l'approche vérifiable suisse un défi si intéressant.
+                    </p>
+                    <a href="evoting-registration-production.html" class="blog-read-more">Lire la suite →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-date">18 juin 2026</span>
+                        <div class="blog-tags">
+                            <span class="blog-tag">SwissID</span>
+                            <span class="blog-tag">AGOV</span>
+                            <span class="blog-tag">MAUI</span>
+                        </div>
+                    </div>
+                    <h2 class="blog-card-title">
+                        <a href="swissid-agov-guichet-unique.html">Connecter l'application Guichet Unique à SwissID et AGOV</a>
+                    </h2>
+                    <p class="blog-card-excerpt">
+                        Ajouter la connexion SwissID et AGOV à l'application mobile Guichet Unique : ce que sont ces identités numériques suisses reconnues, et ce qu'il faut pour les intégrer proprement dans une application .NET MAUI.
+                    </p>
+                    <a href="swissid-agov-guichet-unique.html" class="blog-read-more">Lire la suite →</a>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. Tous droits réservés.</p>
+            <p>Développeur .NET & Full Stack basé à Neuchâtel, en Suisse</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neuchâtel réintroduit le vote électronique en novembre 2026. Un regard d'ensemble sur la construction des services d'inscription au vote électronique de la plateforme Guichet Unique.">
+    <meta name="keywords" content="Vote électronique, E-Voting, Neuchâtel, Guichet Unique, normes eCH, Poste suisse, Démocratie numérique, .NET">
+    <meta name="author" content="Adrien Michaud">
+    <title>Mettre en production l'inscription au vote électronique | Adrien Michaud</title>
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/fr/blog/evoting-registration-production.html">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/blog/evoting-registration-production.html">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/blog/evoting-registration-production.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/blog/evoting-registration-production.html">
+
+    <!-- Open Graph / partage social -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="Mettre en production l'inscription au vote électronique">
+    <meta property="og:description" content="Neuchâtel réintroduit le vote électronique en novembre 2026. Un regard d'ensemble sur la construction des services d'inscription au vote électronique de la plateforme Guichet Unique.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/fr/blog/evoting-registration-production.html">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="article:published_time" content="2026-06-18">
+    <meta property="article:author" content="Adrien Michaud">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mettre en production l'inscription au vote électronique">
+    <meta name="twitter:description" content="Neuchâtel réintroduit le vote électronique en novembre 2026. Un regard d'ensemble sur la construction des services d'inscription au vote électronique de la plateforme Guichet Unique.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+
+    <!-- Données structurées (JSON-LD inerte, pas du JavaScript exécuté) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Mettre en production l'inscription au vote électronique",
+      "description": "Neuchâtel réintroduit le vote électronique en novembre 2026. Un regard d'ensemble sur la construction des services d'inscription au vote électronique de la plateforme Guichet Unique.",
+      "datePublished": "2026-06-18",
+      "inLanguage": "fr",
+      "author": { "@type": "Person", "name": "Adrien Michaud", "url": "https://www.michaud-developpement-informatique.fr/fr/" },
+      "publisher": { "@type": "Person", "name": "Adrien Michaud" },
+      "image": "https://www.michaud-developpement-informatique.fr/images/og-image.png",
+      "mainEntityOfPage": "https://www.michaud-developpement-informatique.fr/fr/blog/evoting-registration-production.html"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Expérience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projets</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Compétences</a></li>
+                <li><a href="index.html" class="nav-link">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../en/blog/evoting-registration-production.html" class="nav-link" hreflang="en" lang="en">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête de l'article -->
+    <header class="blog-post-header">
+        <div class="container">
+            <h1 class="blog-post-title">Mettre en production l'inscription au vote électronique</h1>
+            <div class="blog-post-meta">
+                <span class="blog-date">18 juin 2026</span>
+                <div class="blog-tags">
+                    <span class="blog-tag">Vote électronique</span>
+                    <span class="blog-tag">Secteur public</span>
+                    <span class="blog-tag">.NET</span>
+                    <span class="blog-tag">Neuchâtel</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu de l'article -->
+    <main class="blog-post-content">
+        <div class="container">
+            <a href="index.html" class="blog-back-link">← Retour au blog</a>
+
+            <p>
+                Après des années de préparation, le canton de Neuchâtel réintroduit le vote électronique,
+                avec un déploiement prévu à partir de novembre 2026. Cette étape a pour moi une saveur
+                particulière : j'ai construit les <strong>services d'inscription</strong> qui permettent aux
+                électeurs d'opter pour le canal électronique sur la plateforme Guichet Unique. Dans cet
+                article, je souhaite partager, à grands traits, ce qu'a représenté ce travail et pourquoi
+                l'approche suisse du vote électronique en fait un défi d'ingénierie si intéressant.
+            </p>
+
+            <h2>Pourquoi le vote électronique suisse est différent</h2>
+
+            <p>
+                La Suisse vote plus souvent que presque tout autre pays, et une large part des citoyens vote
+                déjà par correspondance. Le vote électronique est proposé comme un canal supplémentaire et
+                facultatif — jamais comme un remplacement. Depuis l'entrée en vigueur des ordonnances
+                fédérales révisées en 2022, seuls les <strong>systèmes entièrement vérifiables</strong> sont
+                autorisés : l'électeur peut contrôler que son suffrage a bien été enregistré tel qu'il
+                l'entendait, et des observateurs peuvent vérifier que tous les suffrages ont été correctement
+                décomptés, le tout sans jamais rompre le secret du vote.
+            </p>
+
+            <p>
+                Cette exigence façonne tout le reste. Le travail porte moins sur des fonctionnalités
+                astucieuses que sur l'exactitude, la traçabilité et le respect d'un cadre construit autour de
+                la confiance dans le processus démocratique.
+            </p>
+
+            <h2>La place de l'inscription</h2>
+
+            <p>
+                Avant que quiconque puisse voter par voie électronique, le canton a besoin d'un moyen fiable
+                de gérer qui est éligible et qui a choisi d'utiliser ce canal. C'est la partie sur laquelle
+                j'ai travaillé. Dans les grandes lignes, les services d'inscription couvrent :
+            </p>
+
+            <ul>
+                <li>Une page d'inscription destinée aux citoyens, où les électeurs éligibles peuvent s'inscrire au canal électronique — avec vérification de leurs droits de vote au passage.</li>
+                <li>Un parcours de désinscription, qui enregistre le motif indiqué par le citoyen lorsqu'il se retire.</li>
+                <li>Une page d'administration permettant aux collaborateurs du canton de gérer la liste des citoyens inscrits au vote électronique.</li>
+            </ul>
+
+            <p>
+                L'objectif, du début à la fin, était un processus auquel les administrateurs puissent se
+                fier et qui résiste à l'examen qu'un système démocratique mérite.
+            </p>
+
+            <h2>Bâti sur les normes eCH</h2>
+
+            <p>
+                Une bonne part de cette rigueur vient des <strong>normes eCH</strong>, les standards
+                officiels de la cyberadministration suisse, qui garantissent l'interopérabilité entre les
+                systèmes communaux, cantonaux et fédéraux. Travailler dans ce cadre (par exemple pour les
+                registres des électeurs et des scrutins, ou les données relatives aux droits politiques)
+                signifie que la plateforme parle la même langue que le reste de l'écosystème suisse, au lieu
+                d'inventer ses propres formats.
+            </p>
+
+            <p>
+                En pratique, cela maintient la cohérence des données entre les systèmes et rend l'ensemble du
+                processus plus facile à vérifier — ce qui est précisément le but recherché.
+            </p>
+
+            <h2>Du projet à la production</h2>
+
+            <p>
+                Passer d'un système qui fonctionne à un système dont de vrais citoyens dépendent change
+                d'échelle : cela demande des tests minutieux, de la documentation et une collaboration
+                étroite avec le service informatique cantonal pour s'assurer que chaque exigence est
+                satisfaite. Voir cet effort aboutir à une mise en production pour un scrutin réel est une
+                vraie satisfaction.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Contribuer au vote électronique à Neuchâtel a été l'un des projets les plus porteurs de sens
+                de ma carrière jusqu'ici — un endroit où une ingénierie soignée soutient directement la
+                participation démocratique, en rendant le vote plus accessible aux citoyens de l'étranger,
+                aux personnes à mobilité réduite et à toute personne qui tient à cette possibilité. J'ai hâte
+                de voir le canal à l'œuvre dès novembre 2026.
+            </p>
+
+            <p>
+                Pour le contexte officiel, voir le
+                <a href="https://www.ne.ch/communiques-de-presse/le-canton-de-neuchatel-reintroduit-le-vote-electronique" target="_blank" rel="noopener">communiqué de presse du canton de Neuchâtel</a>
+                et ce
+                <a href="https://www.rts.ch/info/regions/neuchatel/2026/article/neuchatel-reintroduit-le-vote-electronique-des-novembre-2026-29276122.html" target="_blank" rel="noopener">reportage de la RTS</a>.
+                Vous pouvez aussi en lire davantage sur la plateforme dans ma
+                <a href="../projects/guichet-unique.html">fiche projet Guichet Unique</a>.
+            </p>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. Tous droits réservés.</p>
+            <p>Développeur .NET & Full Stack basé à Neuchâtel, en Suisse</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "header", "key": "accept-language", "value": { "pre": "fr" } }
+      ],
+      "destination": "/fr/",
+      "permanent": false
+    },
+    { "source": "/", "destination": "/en/", "permanent": false },
+
+    { "source": "/blog.html", "destination": "/en/blog/", "statusCode": 301 },
+    { "source": "/guichet-unique.html", "destination": "/en/projects/guichet-unique.html", "statusCode": 301 },
+    { "source": "/tas-cas.html", "destination": "/en/projects/tas-cas.html", "statusCode": 301 },
+    { "source": "/nemo-wifi.html", "destination": "/en/projects/nemo-wifi.html", "statusCode": 301 },
+    { "source": "/rappel-privacy.html", "destination": "/fr/privacy/rappel.html", "statusCode": 301 },
+    { "source": "/og-image.png", "destination": "/images/og-image.png", "statusCode": 301 },
+    { "source": "/favicon.svg", "destination": "/images/favicon.svg", "statusCode": 301 }
+  ]
+}

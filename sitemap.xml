@@ -1,39 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Every page exists in both languages and is indexable. The hreflang
+     alternates live in each page's <head>. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/</loc>
-        <lastmod>2026-06-24</lastmod>
+        <loc>https://www.michaud-developpement-informatique.fr/en/</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/blog.html</loc>
-        <lastmod>2026-06-24</lastmod>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/guichet-unique.html</loc>
-        <lastmod>2026-06-24</lastmod>
+        <loc>https://www.michaud-developpement-informatique.fr/en/blog/</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/tas-cas.html</loc>
-        <lastmod>2026-06-24</lastmod>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/blog/</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/nemo-wifi.html</loc>
-        <lastmod>2026-06-24</lastmod>
+        <loc>https://www.michaud-developpement-informatique.fr/en/projects/guichet-unique.html</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/rappel-privacy.html</loc>
-        <lastmod>2026-06-24</lastmod>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/projects/guichet-unique.html</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/blog/evoting-registration-production.html</loc>
+        <loc>https://www.michaud-developpement-informatique.fr/en/projects/tas-cas.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/projects/tas-cas.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/en/projects/nemo-wifi.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/projects/nemo-wifi.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/en/blog/evoting-registration-production.html</loc>
         <lastmod>2026-06-18</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/blog/swissid-agov-guichet-unique.html</loc>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/blog/evoting-registration-production.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/en/blog/swissid-agov-guichet-unique.html</loc>
         <lastmod>2026-06-18</lastmod>
     </url>
     <url>
-        <loc>https://www.michaud-developpement-informatique.fr/blog/street-harassment-reporting-platform.html</loc>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/blog/swissid-agov-guichet-unique.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/en/blog/street-harassment-reporting-platform.html</loc>
         <lastmod>2026-06-24</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/blog/street-harassment-reporting-platform.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/en/privacy/rappel.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://www.michaud-developpement-informatique.fr/fr/privacy/rappel.html</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
 </urlset>

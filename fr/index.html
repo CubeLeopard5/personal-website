@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adrien Michaud - Développeur .NET & Full Stack spécialisé dans la transformation numérique du secteur public. Près de 3 ans d'expérience en Blazor, .NET MAUI et Clean Architecture pour des projets publics à Neuchâtel, en Suisse.">
+    <meta name="keywords" content="Développeur .NET, Blazor, MAUI, Services publics, Vote électronique, Transformation numérique, Neuchâtel, Suisse, Clean Architecture, CQRS, MediatR">
+    <meta name="author" content="Adrien Michaud">
+    <title>Adrien Michaud - Développeur .NET & Full Stack</title>
+    <link rel="preload" href="../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/fr/">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/">
+
+    <!-- Open Graph / partage social -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="Adrien Michaud — Développeur .NET & Full Stack">
+    <meta property="og:description" content="Adrien Michaud - Développeur .NET & Full Stack spécialisé dans la transformation numérique du secteur public. Près de 3 ans d'expérience en Blazor, .NET MAUI et Clean Architecture pour des projets publics à Neuchâtel, en Suisse.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/fr/">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adrien Michaud — Développeur .NET & Full Stack">
+    <meta name="twitter:description" content="Adrien Michaud - Développeur .NET & Full Stack spécialisé dans la transformation numérique du secteur public. Près de 3 ans d'expérience en Blazor, .NET MAUI et Clean Architecture pour des projets publics à Neuchâtel, en Suisse.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+
+    <!-- Données structurées (JSON-LD inerte, pas du JavaScript exécuté) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adrien Michaud",
+      "jobTitle": "Développeur .NET & Full Stack",
+      "url": "https://www.michaud-developpement-informatique.fr/fr/",
+      "image": "https://www.michaud-developpement-informatique.fr/images/og-image.png",
+      "email": "mailto:michaudadrien78@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Neuchâtel", "addressCountry": "CH" },
+      "sameAs": ["https://www.linkedin.com/in/adrienmichaud/"],
+      "alumniOf": ["EPITECH", "Dublin City University"],
+      "knowsAbout": [".NET", "Blazor", ".NET MAUI", "Clean Architecture", "Angular", "Vue.js"]
+    }
+    </script>
+</head>
+<body>
+    <!-- En-tête / Section héro -->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="nav-brand">AM</div>
+                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#experience" class="nav-link">Expérience</a></li>
+                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-lang"><a href="../en/index.html" class="nav-link" hreflang="en" lang="en">EN</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1 class="hero-title">Adrien Michaud</h1>
+                <p class="hero-subtitle">Développeur .NET & Full Stack</p>
+                <p class="hero-location">Neuchâtel, Suisse</p>
+                <p class="hero-description">Je travaille sur le système de vote électronique du Guichet Unique, au service de la démocratie dans le canton</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <a href="https://www.linkedin.com/in/adrienmichaud/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <!-- Section À propos -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">À propos</h2>
+            <div class="about-content">
+                <p>Diplômé d'Epitech, je suis passionné par les technologies web modernes et le développement logiciel. Je suis spécialisé dans le développement .NET avec Blazor et MAUI, pour construire des applications robustes et évolutives.</p>
+
+                <p>Avec près de 3 ans d'expérience professionnelle sur des projets variés, j'ai fait mes preuves dans la livraison de solutions de qualité, qui répondent aux objectifs métier et dépassent les attentes des clients.</p>
+
+                <p>En dehors de mon activité professionnelle, je suis membre actif d'ESN Neuchâtel (Erasmus Student Network), où j'aide les étudiants internationaux à découvrir la Suisse et à s'intégrer dans la communauté locale.</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Ce que je peux faire</h3>
+                        <ul>
+                            <li>Développer des applications web de niveau entreprise</li>
+                            <li>Concevoir des MVP et des preuves de concept</li>
+                            <li>Transformer des maquettes en code prêt pour la production</li>
+                            <li>Collaborer efficacement avec des équipes pluridisciplinaires</li>
+                            <li>Moderniser et refactoriser des applications existantes</li>
+                            <li>Implémenter de nouvelles fonctionnalités et intégrer des API</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Ma façon de travailler</h3>
+                        <p><strong>Votre réussite est ma priorité</strong>. Je m'attache à comprendre vos besoins métier et à livrer des solutions sur mesure, qui allient excellence technique et valeur concrète. Un code propre, les bonnes pratiques et une communication claire sont au cœur de tout ce que je fais.</p>
+                        <p>Je suis toujours ouvert à de nouvelles collaborations et à des défis stimulants où mon expertise peut vous aider à atteindre vos objectifs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title">Expérience professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mars 2024 - Aujourd'hui</span>
+                        <h3>Développeur logiciel</h3>
+                        <h4>Arcantel SA · Temps plein</h4>
+                        <p class="location">Neuchâtel, Suisse</p>
+                        <p>Développement d'applications web et mobiles pour TransN, le TAS (Tribunal Arbitral du Sport) et le SIEN (Service informatique de l'État de Neuchâtel). Travail sur des solutions blockchain avec NEDAO et mise en œuvre du vote électronique pour le canton de Neuchâtel.</p>
+                        <div class="tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">.NET framework</span>
+                            <span class="tag">Blazor</span>
+                            <span class="tag">MAUI</span>
+                            <span class="tag">Angular</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Microsoft SQL Server</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">IIS</span>
+                            <span class="tag">TeamCity</span>
+                            <span class="tag">Fastlane</span>
+                            <span class="tag">iOS</span>
+                            <span class="tag">Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Septembre 2024 - Aujourd'hui</span>
+                        <h3>Membre actif</h3>
+                        <h4>Erasmus Student Network</h4>
+                        <p class="location">Neuchâtel, Suisse</p>
+                        <p>J'aide les étudiants internationaux à découvrir la Suisse et sa culture à travers divers événements et activités, afin de faciliter leur intégration dans la communauté locale.</p>
+                        <div class="tags">
+                            <span class="tag">Gestion d'événements</span>
+                            <span class="tag">Animation de communauté</span>
+                            <span class="tag">Communication interculturelle</span>
+                            <span class="tag">Travail d'équipe</span>
+                            <span class="tag">Bénévolat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Avril 2022 - Juillet 2022</span>
+                        <h3>Développeur back-end</h3>
+                        <h4>ESPRI Digital · Stage</h4>
+                        <p class="location">Argentan, France</p>
+                        <p>Utilisation de Kubernetes pour gérer les conteneurs de différents services, avec pour mission principale la mise en place d'un service de sauvegarde de bases de données garantissant la fiabilité des données et la reprise après incident.</p>
+                        <div class="tags">
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Bases de données</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Septembre 2021 - Mars 2022</span>
+                        <h3>Développeur front-end</h3>
+                        <h4>Axxone System · Stage</h4>
+                        <p class="location">Lyon, France</p>
+                        <p>Refonte du site de la Mutuelle Générale de Prévoyance en Vue.js. Reprise d'une partie de l'API en PHP.</p>
+                        <div class="tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">UX</span>
+                            <span class="tag">PHP</span>
+                        </div>
+                        <a href="https://extranet.mgprev.fr/#/" target="_blank" class="project-link">Voir le site →</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Juillet 2020 - Décembre 2020</span>
+                        <h3>Développeur full stack</h3>
+                        <h4>Axxone System · Stage</h4>
+                        <p class="location">Lyon, France</p>
+                        <p>Création de composants Vue.js et mise en place d'un système de recherche plein texte et d'indexation avec Elasticsearch.</p>
+                        <div class="tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Guichet Unique</h3>
+                    <p>Je travaille sur la partie chancellerie de la plateforme Guichet Unique, pour y implémenter le vote électronique destiné aux citoyennes et citoyens du canton de Neuchâtel.</p>
+                    <p>Ce projet contribue à renforcer la démocratie en rendant le vote plus accessible et plus sûr pour toutes et tous.</p>
+                    <div class="tags">
+                        <span class="tag">.NET</span>
+                        <span class="tag">Vote électronique</span>
+                        <span class="tag">Secteur public</span>
+                        <span class="tag">Démocratie</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/guichet-unique.html" class="project-link">En savoir plus →</a>
+                        <a href="https://www.guichetunique.ch/" target="_blank" class="project-link">Voir le site →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>GuMobile</h3>
+                    <p>Application mobile de la plateforme Guichet Unique, qui donne aux citoyens un accès simple aux services de l'administration sur iOS et Android.</p>
+                    <p>L'application permet de gérer ses démarches administratives, d'accéder aux services publics et de rester informé de l'actualité cantonale directement depuis son smartphone.</p>
+                    <div class="tags">
+                        <span class="tag">MAUI</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">Développement mobile</span>
+                        <span class="tag">Services publics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://apps.apple.com/ch/app/guichet-unique/id1449990570" target="_blank" class="project-link">App Store iOS →</a>
+                        <a href="https://play.google.com/store/apps/details?id=ch.ne.gumobile&hl=fr_CH" target="_blank" class="project-link">Google Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>NEDAO</h3>
+                    <p>Une plateforme participative basée à Neuchâtel, qui permet aux citoyens, aux PME et aux institutions d'expérimenter les technologies émergentes et de nouveaux modèles de gouvernance.</p>
+                    <p>Le projet explore les systèmes de gouvernance sur blockchain, les smart contracts et les organisations autonomes décentralisées (DAO), afin d'explorer et de comprendre de nouveaux paradigmes de démocratie numérique et de décision participative.</p>
+                    <div class="tags">
+                        <span class="tag">Blockchain</span>
+                        <span class="tag">Smart contracts</span>
+                        <span class="tag">DAO</span>
+                        <span class="tag">Gouvernance</span>
+                        <span class="tag">Web3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://did.nedao.ch/" target="_blank" class="project-link">Portail DID →</a>
+                        <a href="https://www.nedao.ch/" target="_blank" class="project-link">Site principal →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Nemo News</h3>
+                    <p>Système d'information mobile officiel développé par l'État et la Ville de Neuchâtel en partenariat avec Arcantel, qui diffuse les actualités et les communications des institutions publiques directement sur le smartphone des citoyens.</p>
+                    <p>L'application propose un filtrage des actualités par thème et par éditeur, des notifications push pour les informations importantes, des alertes d'urgence, des services de géolocalisation et un annuaire des numéros d'urgence de la région neuchâteloise.</p>
+                    <div class="tags">
+                        <span class="tag">MAUI</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">Plateforme d'actualités</span>
+                        <span class="tag">Information publique</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://apps.apple.com/ch/app/nemo-news/id1215309614" target="_blank" class="project-link">App Store iOS →</a>
+                        <a href="https://play.google.com/store/search?q=Nemo%20News&c=apps&hl=fr_CH" target="_blank" class="project-link">Google Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Nemo Wifi</h3>
+                    <p>Initiative de réseau WiFi public gratuit lancée par le canton de Neuchâtel, qui offre un accès internet sécurisé sur environ 300 points d'accès répartis dans toute la région.</p>
+                    <p>Le service repose sur une authentification unifiée permettant de se connecter sur plusieurs sites avec un seul identifiant, une inscription par SMS, et la prise en charge des numéros de téléphone internationaux sans collecte de données personnelles.</p>
+                    <div class="tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Réseau WiFi</span>
+                        <span class="tag">Authentification</span>
+                        <span class="tag">Service public</span>
+                        <span class="tag">Infrastructure</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/nemo-wifi.html" class="project-link">En savoir plus →</a>
+                        <a href="https://freewifi.ne.ch/projet-freewifine/acceder-a-freewifine" target="_blank" class="project-link">Voir le service →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>TAS/CAS - Tribunal Arbitral du Sport</h3>
+                    <p>J'ai participé à la refonte du site principal du TAS/CAS et développé la nouvelle plateforme de jurisprudence.</p>
+                    <p>Le site de jurisprudence donne un accès complet aux sentences arbitrales sportives et aux précédents juridiques.</p>
+                    <div class="tags">
+                        <span class="tag">.NET</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">Refonte web</span>
+                        <span class="tag">Plateforme juridique</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/tas-cas.html" class="project-link">En savoir plus →</a>
+                        <a href="https://www.tas-cas.org/" target="_blank" class="project-link">Site principal →</a>
+                        <a href="https://jurisprudence.tas-cas.org/" target="_blank" class="project-link">Jurisprudence →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formation -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <h2 class="section-title">Formation</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>EPITECH - European Institute of Technology</h3>
+                    <span class="education-date">Septembre 2019 - Août 2024</span>
+                    <p class="education-degree">Expert en technologies de l'information, développement logiciel</p>
+                    <p>Le Programme Grande École est le cursus phare d'Epitech Technology. Une formation de 5 ans pour devenir expert en informatique, au contenu technique dense et progressif, jalonnée de projets de programmation couvrant de nombreux langages.</p>
+                    <div class="tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <h3>Dublin City University</h3>
+                    <span class="education-date">Septembre 2022 - Mai 2023</span>
+                    <p class="education-degree">Faculty of Engineering and Computing</p>
+                    <p class="location">Dublin, Irlande</p>
+                    <p>Quatrième année d'études à la Dublin City University, en Irlande. Cette expérience internationale m'a permis d'élargir mes connaissances en découvrant une autre culture.</p>
+                    <div class="tags">
+                        <span class="tag">Python Django</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Travail d'équipe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+
+            <div class="skills-category">
+                <h3>Écosystème .NET</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">C#</div>
+                    <div class="skill-item">.NET Framework</div>
+                    <div class="skill-item">Blazor</div>
+                    <div class="skill-item">MAUI</div>
+                    <div class="skill-item">ASP.NET Core</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Architecture logicielle & patterns</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Clean Architecture</div>
+                    <div class="skill-item">MediatR</div>
+                    <div class="skill-item">API REST</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Développement mobile</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">iOS</div>
+                    <div class="skill-item">Android</div>
+                    <div class="skill-item">Fastlane</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Technologies front-end</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Angular</div>
+                    <div class="skill-item">Vue.js</div>
+                    <div class="skill-item">TypeScript</div>
+                    <div class="skill-item">JavaScript</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Bases de données</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Microsoft SQL Server</div>
+                    <div class="skill-item">MySQL</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>DevOps & outils</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">TeamCity</div>
+                    <div class="skill-item">Git / SVN</div>
+                    <div class="skill-item">IIS</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Autres technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">PHP</div>
+                    <div class="skill-item">C / C++</div>
+                    <div class="skill-item">Blockchain</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Langues</h3>
+                <div class="languages">
+                    <div class="language-item">
+                        <strong>Français</strong> - Langue maternelle
+                    </div>
+                    <div class="language-item">
+                        <strong>Anglais</strong> - Niveau professionnel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <p class="contact-text">Je suis toujours à la recherche de nouvelles collaborations pour mettre mon expertise au service de vos projets.</p>
+                <p class="contact-text">N'hésitez pas à me contacter pour discuter de vos besoins.</p>
+
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/adrienmichaud/" target="_blank" class="contact-link">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:michaudadrien78@gmail.com" class="contact-link">
+                        michaudadrien78@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. Tous droits réservés.</p>
+            <p>Développeur .NET & Full Stack basé à Neuchâtel, en Suisse</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

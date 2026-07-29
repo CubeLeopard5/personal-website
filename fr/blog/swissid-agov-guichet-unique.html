@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ajouter la connexion SwissID et AGOV à l'application mobile Guichet Unique : ce que sont ces identités numériques suisses reconnues et ce qu'il faut pour les intégrer dans une application .NET MAUI.">
+    <meta name="keywords" content="SwissID, AGOV, Identité numérique, .NET MAUI, Guichet Unique, Authentification, OpenID Connect, Suisse">
+    <meta name="author" content="Adrien Michaud">
+    <title>Connecter l'application Guichet Unique à SwissID et AGOV | Adrien Michaud</title>
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/fr/blog/swissid-agov-guichet-unique.html">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/blog/swissid-agov-guichet-unique.html">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/blog/swissid-agov-guichet-unique.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/blog/swissid-agov-guichet-unique.html">
+
+    <!-- Open Graph / partage social -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="Connecter l'application Guichet Unique à SwissID et AGOV">
+    <meta property="og:description" content="Ajouter la connexion SwissID et AGOV à l'application mobile Guichet Unique : ce que sont ces identités numériques suisses reconnues et ce qu'il faut pour les intégrer dans une application .NET MAUI.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/fr/blog/swissid-agov-guichet-unique.html">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="article:published_time" content="2026-06-18">
+    <meta property="article:author" content="Adrien Michaud">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Connecter l'application Guichet Unique à SwissID et AGOV">
+    <meta name="twitter:description" content="Ajouter la connexion SwissID et AGOV à l'application mobile Guichet Unique : ce que sont ces identités numériques suisses reconnues et ce qu'il faut pour les intégrer dans une application .NET MAUI.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+
+    <!-- Données structurées (JSON-LD inerte, pas du JavaScript exécuté) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Connecter l'application Guichet Unique à SwissID et AGOV",
+      "description": "Ajouter la connexion SwissID et AGOV à l'application mobile Guichet Unique : ce que sont ces identités numériques suisses reconnues et ce qu'il faut pour les intégrer dans une application .NET MAUI.",
+      "datePublished": "2026-06-18",
+      "inLanguage": "fr",
+      "author": { "@type": "Person", "name": "Adrien Michaud", "url": "https://www.michaud-developpement-informatique.fr/fr/" },
+      "publisher": { "@type": "Person", "name": "Adrien Michaud" },
+      "image": "https://www.michaud-developpement-informatique.fr/images/og-image.png",
+      "mainEntityOfPage": "https://www.michaud-developpement-informatique.fr/fr/blog/swissid-agov-guichet-unique.html"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Expérience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projets</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Compétences</a></li>
+                <li><a href="index.html" class="nav-link">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../en/blog/swissid-agov-guichet-unique.html" class="nav-link" hreflang="en" lang="en">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête de l'article -->
+    <header class="blog-post-header">
+        <div class="container">
+            <h1 class="blog-post-title">Connecter l'application Guichet Unique à SwissID et AGOV</h1>
+            <div class="blog-post-meta">
+                <span class="blog-date">18 juin 2026</span>
+                <div class="blog-tags">
+                    <span class="blog-tag">SwissID</span>
+                    <span class="blog-tag">AGOV</span>
+                    <span class="blog-tag">MAUI</span>
+                    <span class="blog-tag">Identité numérique</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu de l'article -->
+    <main class="blog-post-content">
+        <div class="container">
+            <a href="index.html" class="blog-back-link">← Retour au blog</a>
+
+            <p>
+                L'une de mes livraisons récentes sur la plateforme Guichet Unique a consisté à intégrer deux
+                identités numériques suisses reconnues — <strong>SwissID</strong> et <strong>AGOV</strong> —
+                comme options de connexion dans l'application mobile. Dans cet article, je présente à grands
+                traits ce que sont ces fournisseurs d'identité et ce qu'il faut pour les amener dans une
+                application .NET MAUI.
+            </p>
+
+            <h2>Pourquoi les identités numériques reconnues comptent</h2>
+
+            <p>
+                Les services publics ont une contrainte forte que les applications grand public ne partagent
+                pas toujours : ils doivent savoir avec certitude qui se trouve à l'autre bout. Développer ses
+                propres comptes et mots de passe pour une plateforme étatique est une mauvaise réponse — un
+                risque de sécurité autant qu'une mauvaise expérience.
+            </p>
+
+            <p>
+                La bonne approche consiste à déléguer l'authentification à des fournisseurs d'identité de
+                confiance, reconnus au niveau national. C'est exactement ce qu'offrent SwissID et AGOV :
+            </p>
+
+            <ul>
+                <li>
+                    <strong>SwissID</strong> — une identité numérique largement répandue en Suisse, déjà
+                    acceptée par de nombreux services en ligne publics et privés.
+                </li>
+                <li>
+                    <strong>AGOV</strong> — le service de connexion des autorités suisses, conçu
+                    spécifiquement pour donner aux citoyens un accès sécurisé aux prestations en ligne de
+                    l'administration.
+                </li>
+            </ul>
+
+            <p>
+                Prendre en charge les deux permet aux citoyens de se connecter avec une identité qu'ils
+                possèdent déjà et à laquelle ils font confiance, plutôt que de créer encore un compte.
+            </p>
+
+            <h2>Les intégrer dans une application MAUI</h2>
+
+            <p>
+                L'application mobile du Guichet Unique (GuMobile) est développée en <strong>.NET MAUI</strong> :
+                l'intégration devait donc fonctionner proprement sur iOS comme sur Android, à partir d'une
+                seule base de code. Sans entrer dans des détails sensibles, le travail s'est articulé autour
+                de quelques piliers classiques de l'authentification moderne :
+            </p>
+
+            <ul>
+                <li>Des parcours de connexion fondés sur les standards, qui confient l'authentification au fournisseur d'identité et ramènent l'utilisateur dans l'application en toute sécurité.</li>
+                <li>Aucun identifiant conservé dans l'application : l'authentification est entièrement déléguée au fournisseur d'identité, les mots de passe ne résident donc plus sur l'appareil.</li>
+                <li>Une expérience de connexion cohérente et digne de confiance, quel que soit le fournisseur choisi par le citoyen.</li>
+            </ul>
+
+            <p>
+                Une bonne partie de l'effort, dans ce type d'intégration, se joue dans des détails que
+                l'utilisateur ne voit jamais : gérer de façon fiable le retour dans l'application, traiter
+                proprement les sessions annulées ou expirées, et tester les parcours en profondeur sur de
+                vrais appareils.
+            </p>
+
+            <h2>Du point de vue de l'utilisateur</h2>
+
+            <p>
+                Quand tout s'assemble, le résultat est presque invisible — et c'est justement le but. Le
+                citoyen appuie sur « Se connecter avec AGOV » ou « Se connecter avec SwissID », s'authentifie
+                avec une identité qu'il gère déjà, et revient dans l'application, prêt à utiliser les services
+                de l'administration. Pas de nouveau mot de passe, pas de compte supplémentaire, et une
+                authentification prise en charge par des acteurs dont c'est le métier.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Intégrer SwissID et AGOV n'est qu'une pièce d'un ensemble plus vaste : rendre les services
+                publics suisses réellement utilisables sur mobile, sans jamais abaisser le niveau d'exigence
+                en matière de sécurité. S'appuyer sur des identités numériques reconnues en est la bonne
+                fondation — meilleure pour la sécurité, et meilleure pour les personnes qui utilisent
+                l'application.
+            </p>
+
+            <p>
+                Vous trouverez l'application Guichet Unique sur l'
+                <a href="https://apps.apple.com/ch/app/guichet-unique/id1449990570" target="_blank" rel="noopener">App Store</a>
+                et sur
+                <a href="https://play.google.com/store/apps/details?id=ch.ne.gumobile&hl=fr_CH" target="_blank" rel="noopener">Google Play</a>,
+                et vous pouvez en lire davantage sur mon travail dans la
+                <a href="../projects/guichet-unique.html">fiche projet Guichet Unique</a>.
+            </p>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. Tous droits réservés.</p>
+            <p>Développeur .NET & Full Stack basé à Neuchâtel, en Suisse</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+</html>

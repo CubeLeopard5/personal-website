@@ -7,43 +7,47 @@
     <meta name="keywords" content="Blog, .NET, Software Development, Clean Architecture, E-Voting, Government Services, Blazor, MAUI">
     <meta name="author" content="Adrien Michaud">
     <title>Blog | Adrien Michaud</title>
-    <link rel="preload" href="fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/blog.html">
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/en/blog/">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/blog/">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/blog/">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/blog/">
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Adrien Michaud">
     <meta property="og:title" content="Blog — Adrien Michaud">
     <meta property="og:description" content="Blog by Adrien Michaud - Insights on .NET development, software architecture, e-voting, and government digital transformation.">
-    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/blog.html">
-    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/og-image.png">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/en/blog/">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog — Adrien Michaud">
     <meta name="twitter:description" content="Blog by Adrien Michaud - Insights on .NET development, software architecture, e-voting, and government digital transformation.">
-    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/og-image.png">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="nav-brand">AM</a>
+            <a href="../index.html" class="nav-brand">AM</a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
-                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
-                <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../fr/blog/index.html" class="nav-link" hreflang="fr" lang="fr">FR</a></li>
             </ul>
         </div>
     </nav>
@@ -70,12 +74,12 @@
                         </div>
                     </div>
                     <h2 class="blog-card-title">
-                        <a href="blog/street-harassment-reporting-platform.html">Building a Street Harassment Reporting Platform</a>
+                        <a href="street-harassment-reporting-platform.html">Building a Street Harassment Reporting Platform</a>
                     </h2>
                     <p class="blog-card-excerpt">
                         Neuchâtel launched a platform for citizens to report street harassment, built on the Guichet Unique. A high-level look at delivering a public-service tool where trust — anonymity, clarity, and care with sensitive reports — matters more than the code.
                     </p>
-                    <a href="blog/street-harassment-reporting-platform.html" class="blog-read-more">Read more →</a>
+                    <a href="street-harassment-reporting-platform.html" class="blog-read-more">Read more →</a>
                 </article>
 
                 <article class="blog-card">
@@ -88,12 +92,12 @@
                         </div>
                     </div>
                     <h2 class="blog-card-title">
-                        <a href="blog/evoting-registration-production.html">Bringing E-Voting Registration to Production</a>
+                        <a href="evoting-registration-production.html">Bringing E-Voting Registration to Production</a>
                     </h2>
                     <p class="blog-card-excerpt">
                         Neuchâtel reintroduces electronic voting in November 2026. A high-level look at building the citizen registration services behind it, and why Switzerland's verifiable approach to e-voting is such an interesting challenge.
                     </p>
-                    <a href="blog/evoting-registration-production.html" class="blog-read-more">Read more →</a>
+                    <a href="evoting-registration-production.html" class="blog-read-more">Read more →</a>
                 </article>
 
                 <article class="blog-card">
@@ -106,12 +110,12 @@
                         </div>
                     </div>
                     <h2 class="blog-card-title">
-                        <a href="blog/swissid-agov-guichet-unique.html">Connecting the Guichet Unique App with SwissID and AGOV</a>
+                        <a href="swissid-agov-guichet-unique.html">Connecting the Guichet Unique App with SwissID and AGOV</a>
                     </h2>
                     <p class="blog-card-excerpt">
                         Adding SwissID and AGOV login to the Guichet Unique mobile app — what these recognised Swiss digital identities are, and what it takes to integrate them cleanly into a .NET MAUI application.
                     </p>
-                    <a href="blog/swissid-agov-guichet-unique.html" class="blog-read-more">Read more →</a>
+                    <a href="swissid-agov-guichet-unique.html" class="blog-read-more">Read more →</a>
                 </article>
             </div>
         </div>
@@ -125,6 +129,6 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="../../main.js"></script>
 </body>
 </html>

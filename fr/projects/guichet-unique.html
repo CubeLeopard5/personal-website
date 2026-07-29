@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guichet Unique - Plateforme de vote électronique pour le canton de Neuchâtel. Participation à la démocratie numérique suisse, dans le respect des normes eCH.">
+    <meta name="keywords" content="Vote électronique, Guichet Unique, .NET, Blazor, Services publics, Démocratie numérique, Neuchâtel, normes eCH, cyberadministration suisse">
+    <meta name="author" content="Adrien Michaud">
+    <title>Guichet Unique - Plateforme de vote électronique | Adrien Michaud</title>
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/fr/projects/guichet-unique.html">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/projects/guichet-unique.html">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/projects/guichet-unique.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/projects/guichet-unique.html">
+
+    <!-- Open Graph / partage social -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="Guichet Unique — Plateforme de vote électronique">
+    <meta property="og:description" content="Guichet Unique - Plateforme de vote électronique pour le canton de Neuchâtel. Participation à la démocratie numérique suisse, dans le respect des normes eCH.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/fr/projects/guichet-unique.html">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Guichet Unique — Plateforme de vote électronique">
+    <meta name="twitter:description" content="Guichet Unique - Plateforme de vote électronique pour le canton de Neuchâtel. Participation à la démocratie numérique suisse, dans le respect des normes eCH.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Tous les projets</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../en/projects/guichet-unique.html" class="nav-link" hreflang="en" lang="en">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Héro du projet -->
+    <header class="project-hero">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+            <h1 class="project-title">Guichet Unique</h1>
+            <p class="project-tagline">Contribuer à la démocratie numérique suisse</p>
+        </div>
+    </header>
+
+    <!-- Contenu du projet -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Présentation -->
+            <section class="content-section">
+                <h2>Présentation du projet</h2>
+                <p>Guichet Unique est la plateforme officielle de services numériques du canton de Neuchâtel, en Suisse. Je travaille sur la partie chancellerie pour y implémenter le vote électronique, afin de rendre la démocratie plus accessible et plus sûre pour l'ensemble des citoyennes et citoyens du canton.</p>
+                <p>Ce projet s'inscrit dans une démarche suisse plus large de modernisation de la participation démocratique, au moyen de systèmes de vote électronique sûrs et vérifiables, conformes à une réglementation fédérale et à des standards du secteur particulièrement exigeants.</p>
+            </section>
+
+            <!-- Le vote électronique en Suisse -->
+            <section class="content-section">
+                <h2>Le vote électronique en Suisse</h2>
+                <p>La Suisse a une approche singulière du vote électronique, qui concilie innovation et exigences de sécurité extrêmement élevées. Depuis l'entrée en vigueur des ordonnances révisées sur le vote électronique, le 1<sup>er</sup> juillet 2022, seuls les <strong>systèmes entièrement vérifiables</strong> sont autorisés par le droit fédéral.</p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <h3>Phase pilote</h3>
+                        <p>À ce jour, des essais de vote électronique sont menés dans quatre cantons : Bâle-Ville, Saint-Gall, Thurgovie (depuis juin 2023) et les Grisons (depuis mars 2024). D'autres cantons, dont Lucerne et Genève, prévoient de lancer des essais prochainement.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Vérifiabilité complète</h3>
+                        <p>Les systèmes suisses de vote électronique doivent offrir une vérifiabilité complète : l'électeur peut vérifier que son suffrage a bien été enregistré, et des observateurs indépendants peuvent vérifier que tous les suffrages ont été correctement décomptés, sans jamais compromettre le secret du vote.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Cadre fédéral</h3>
+                        <p>La Chancellerie fédérale supervise la mise en œuvre du vote électronique et veille à ce que tous les systèmes répondent aux exigences de sécurité et au droit électoral suisse. Les systèmes sont soumis à des tests rigoureux, dont des programmes de <i lang="en">bug bounty</i> où des chercheurs en sécurité traquent activement les vulnérabilités.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Normes eCH -->
+            <section class="content-section">
+                <h2>Normes eCH & interopérabilité</h2>
+                <p>La plateforme de vote électronique du Guichet Unique est construite dans le respect des <strong>normes eCH</strong>, les standards officiels de la cyberadministration suisse, qui garantissent l'interopérabilité, la qualité et la cohérence des données à tous les échelons de l'État.</p>
+
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <h3>eCH-0155 : norme de données sur les droits politiques</h3>
+                        <p>Cette norme définit les structures de données pour la gestion des droits de vote et des scrutins aux niveaux communal, cantonal et fédéral. Elle assure une représentation cohérente des données tout au long du processus électoral.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>eCH-0045 : registre des électeurs et des scrutins</h3>
+                        <p>Définit le format et la structure des données d'inscription au registre électoral, afin que les informations d'éligibilité puissent être échangées de manière fiable entre les différents systèmes de l'administration, tout en préservant la confidentialité et la sécurité des données.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Messages d'événements & échange de données</h3>
+                        <p>Les normes eCH définissent les messages d'événements permettant de transmettre les données brutes des urnes électroniques aux systèmes de détermination des résultats. Ces interfaces normalisées permettent une intégration fluide avec les systèmes cantonaux existants de gestion des scrutins.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Formats d'échange des résultats</h3>
+                        <p>Les normes définissent des formats d'échange unifiés pour les résultats des votations et des élections à tous les échelons fédéraux. Elles rendent possibles une agrégation et une publication transparentes des résultats, tout en conservant les pistes d'audit et les capacités de vérification.</p>
+                    </div>
+                </div>
+
+                <p class="section-conclusion">En appliquant ces normes eCH, la plateforme Guichet Unique garantit son interopérabilité avec les autres systèmes de l'administration, réduit les coûts de développement et de maintenance, et pose une base solide pour les évolutions à venir.</p>
+            </section>
+
+            <!-- Mon rôle -->
+            <!--section class="content-section">
+                <h2>Mon rôle & mes contributions techniques</h2>
+                <p>En tant que développeur full stack sur le projet de vote électronique du Guichet Unique, j'ai joué un rôle central dans la mise en œuvre et la gestion du système d'inscription au vote électronique pour le canton de Neuchâtel. Mes responsabilités ont couvert l'ensemble du cycle de développement, de la conception de la base de données jusqu'aux tests et à la mise en production.</p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <h3>Gestion des inscriptions au vote électronique</h3>
+                        <p>Conception et implémentation du système de paramétrage des inscriptions au vote électronique, permettant aux administrateurs de configurer et de gérer les modalités d'inscription pour chaque scrutin. Développement du parcours d'inscription complet pour les citoyens, avec validation, contrôles d'éligibilité et mise à jour du statut en temps réel.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Intégration de l'API de la Poste & gestion des cartes de vote</h3>
+                        <p>Intégration de l'API de vote électronique de la Poste suisse pour permettre une gestion sécurisée des cartes de vote électroniques : blocage de carte, dépôt du suffrage et suivi du statut. Mise en place de toute l'infrastructure permettant aux citoyens de voter avec leur carte électronique, en assurant une intégration fluide entre la plateforme cantonale et le système de vote sécurisé de la Poste.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Mise en œuvre des normes eCH & échange de données</h3>
+                        <p>Participation active à la création et à la génération de plusieurs fichiers aux normes eCH, dont eCH-0045 (registre des électeurs et des scrutins), eCH-0157 (messages de vote électronique) et eCH-0159 (détermination des résultats). Formatage, validation et échange des données entre les différents systèmes de l'administration, dans le respect complet des standards suisses d'interopérabilité.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Gestion des citoyens & conception de la base de données</h3>
+                        <p>Développement de fonctionnalités complètes de gestion des citoyens participant au vote électronique : suivi des inscriptions, gestion des statuts et outils de supervision administrative. Conception et implémentation des schémas et des requêtes permettant de traiter les données des électeurs de manière sécurisée, dans le respect du droit suisse de la protection des données et des normes eCH.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Assurance qualité & tests</h3>
+                        <p>Écriture de tests unitaires approfondis pour garantir la fiabilité du système et l'intégrité des données. Rédaction de protocoles de test détaillés et documentation des procédures, afin de maintenir un niveau de qualité de code élevé. Participation aux tests d'intégration avec les systèmes externes pour vérifier la conformité aux normes eCH.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Documentation & collaboration agile</h3>
+                        <p>Maintien d'une documentation technique complète de toutes les fonctionnalités développées : spécifications d'API, schémas de base de données et parcours utilisateurs. Collaboration étroite avec le Service informatique de l'État (SIEN) lors de points réguliers en méthodologie agile, pour rester aligné sur les exigences cantonales et les standards de sécurité.</p>
+                    </div>
+                </div>
+
+                <p class="section-conclusion">Par ces contributions, j'ai aidé à bâtir une base solide et sécurisée pour le vote électronique à Neuchâtel, en veillant à ce que le système réponde aux plus hautes exigences de fiabilité, de sécurité et d'ergonomie, tant pour les citoyens que pour les administrateurs.</p>
+            </section-->
+
+            <!-- Impact -->
+            <section class="content-section">
+                <h2>Impact & innovation démocratique</h2>
+                <p>La plateforme de vote électronique du Guichet Unique représente une avancée notable pour la démocratie numérique en Suisse. En offrant un canal de vote sûr, vérifiable et accessible, elle contribue à renforcer la participation citoyenne et l'engagement démocratique.</p>
+
+                <div class="impact-stats">
+                    <div class="stat-item">
+                        <h3>Une meilleure accessibilité</h3>
+                        <p>Les Suisses de l'étranger, les personnes en situation de handicap et celles dont la mobilité est réduite peuvent participer pleinement aux scrutins cantonaux, où qu'elles se trouvent dans le monde.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Un rôle de premier plan pour la Suisse</h3>
+                        <p>La rigueur de l'approche suisse — vérifiabilité complète et conformité aux normes eCH — place le pays parmi les références mondiales en matière de vote électronique sécurisé.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Une participation accrue</h3>
+                        <p>En rendant le vote plus simple et plus accessible, le vote électronique peut faire progresser la participation, en particulier chez les jeunes générations et chez les Suisses de l'étranger.</p>
+                    </div>
+                </div>
+
+                <p class="section-conclusion">Ce projet participe à l'avenir de la démocratie suisse, en associant des technologies de pointe à la tradition de démocratie directe et à la forte culture de sécurité du pays.</p>
+            </section>
+
+            <!-- Liens -->
+            <section class="content-section">
+                <h2>En savoir plus</h2>
+                <div class="project-links">
+                    <a href="https://www.guichetunique.ch/" target="_blank" class="project-link">Voir le Guichet Unique →</a>
+                    <a href="https://www.bk.admin.ch/bk/fr/home/politische-rechte/e-voting.html" target="_blank" class="project-link">Le vote électronique sur admin.ch →</a>
+                    <a href="https://www.ech.ch/" target="_blank" class="project-link">Normes eCH →</a>
+                    <a href="../index.html#contact" class="project-link">Me contacter →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. Tous droits réservés.</p>
+            <p>Développeur .NET & Full Stack basé à Neuchâtel, en Suisse</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+</html>

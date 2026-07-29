@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neuchâtel a lancé une plateforme de signalement du harcèlement de rue, bâtie sur le Guichet Unique. Un regard d'ensemble sur un outil de service public où la confiance compte plus que le code.">
+    <meta name="keywords" content="Harcèlement de rue, Guichet Unique, Neuchâtel, Service public, Civic tech, Signalement anonyme, Police neuchâteloise">
+    <meta name="author" content="Adrien Michaud">
+    <title>Construire une plateforme de signalement du harcèlement de rue | Adrien Michaud</title>
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/fr/blog/street-harassment-reporting-platform.html">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/blog/street-harassment-reporting-platform.html">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/blog/street-harassment-reporting-platform.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/blog/street-harassment-reporting-platform.html">
+
+    <!-- Open Graph / partage social -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="Construire une plateforme de signalement du harcèlement de rue">
+    <meta property="og:description" content="Neuchâtel a lancé une plateforme de signalement du harcèlement de rue, bâtie sur le Guichet Unique. Un regard d'ensemble sur un outil de service public où la confiance compte plus que le code.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/fr/blog/street-harassment-reporting-platform.html">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="article:published_time" content="2026-06-24">
+    <meta property="article:author" content="Adrien Michaud">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Construire une plateforme de signalement du harcèlement de rue">
+    <meta name="twitter:description" content="Neuchâtel a lancé une plateforme de signalement du harcèlement de rue, bâtie sur le Guichet Unique. Un regard d'ensemble sur un outil de service public où la confiance compte plus que le code.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+
+    <!-- Données structurées (JSON-LD inerte, pas du JavaScript exécuté) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Construire une plateforme de signalement du harcèlement de rue",
+      "description": "Neuchâtel a lancé une plateforme de signalement du harcèlement de rue, bâtie sur le Guichet Unique. Un regard d'ensemble sur un outil de service public où la confiance compte plus que le code.",
+      "datePublished": "2026-06-24",
+      "inLanguage": "fr",
+      "author": { "@type": "Person", "name": "Adrien Michaud", "url": "https://www.michaud-developpement-informatique.fr/fr/" },
+      "publisher": { "@type": "Person", "name": "Adrien Michaud" },
+      "image": "https://www.michaud-developpement-informatique.fr/images/og-image.png",
+      "mainEntityOfPage": "https://www.michaud-developpement-informatique.fr/fr/blog/street-harassment-reporting-platform.html"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Expérience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projets</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Compétences</a></li>
+                <li><a href="index.html" class="nav-link">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../en/blog/street-harassment-reporting-platform.html" class="nav-link" hreflang="en" lang="en">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête de l'article -->
+    <header class="blog-post-header">
+        <div class="container">
+            <h1 class="blog-post-title">Construire une plateforme de signalement du harcèlement de rue</h1>
+            <div class="blog-post-meta">
+                <span class="blog-date">24 juin 2026</span>
+                <div class="blog-tags">
+                    <span class="blog-tag">Guichet Unique</span>
+                    <span class="blog-tag">Service public</span>
+                    <span class="blog-tag">Civic tech</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu de l'article -->
+    <main class="blog-post-content">
+        <div class="container">
+            <a href="index.html" class="blog-back-link">← Retour au blog</a>
+
+            <p>
+                En mai 2026, le canton de Neuchâtel a lancé un nouvel outil de service public : une plateforme
+                qui permet de signaler des situations de harcèlement de rue. Elle a été bâtie sur le
+                <strong>Guichet Unique</strong> — le portail cantonal de prestations en ligne — et livrée
+                conjointement avec la Police neuchâteloise et le service informatique cantonal. J'ai eu
+                l'occasion de développer cette livraison, et je voulais partager, à grands traits, ce qu'elle
+                fait et pourquoi construire ce type d'outil diffère un peu d'une fonctionnalité ordinaire.
+            </p>
+
+            <h2>Ce que fait la plateforme</h2>
+
+            <p>
+                Le harcèlement de rue — remarques insistantes non désirées, comportements intrusifs, propos
+                sexistes ou intimidants dans l'espace public — reste souvent non signalé. Déposer une plainte
+                formelle peut sembler démesuré au regard de quelques secondes vécues dans la rue, et une
+                grande partie de ces faits n'est donc jamais consignée. L'objectif de la plateforme est
+                d'abaisser ce seuil.
+            </p>
+
+            <p>
+                Depuis le portail Guichet Unique et les applications mobiles, chacun peut décrire une
+                situation vécue ou dont il a été témoin. Deux voies sont proposées :
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Le signalement anonyme</strong> — pour les personnes qui souhaitent documenter ce
+                    qui s'est passé sans laisser de coordonnées.
+                </li>
+                <li>
+                    <strong>Le signalement avec coordonnées</strong> — pour celles qui sont ouvertes à un
+                    suivi, la police s'engageant alors à reprendre contact sous quelques jours.
+                </li>
+            </ul>
+
+            <p>
+                Point important : la plateforme <em>complète</em> les canaux officiels, elle ne les remplace
+                pas. Elle ne se substitue pas à une plainte pénale, et les urgences passent toujours par le
+                numéro d'urgence. Cette distinction devait être communiquée clairement à l'intérieur même de
+                l'outil.
+            </p>
+
+            <h2>Pourquoi ce projet était différent</h2>
+
+            <p>
+                La plupart des fonctionnalités que l'on développe se mesurent en clics et en conversion.
+                Celle-ci se mesure en confiance. Quand une personne ouvre un formulaire pour signaler un fait
+                qui a pu l'ébranler, certaines choses comptent plus que d'habitude :
+            </p>
+
+            <ul>
+                <li>
+                    <strong>La clarté avant l'astuce.</strong> Le parcours doit être posé, court, et sans
+                    ambiguïté sur ce qu'il advient des informations — en particulier sur la différence entre
+                    un signalement anonyme et un signalement qui appelle une réponse.
+                </li>
+                <li>
+                    <strong>Le respect du choix de l'anonymat.</strong> Si une personne choisit de ne pas
+                    s'identifier, ce choix doit être honoré de bout en bout, par conception.
+                </li>
+                <li>
+                    <strong>Le soin apporté à des récits sensibles.</strong> Les signalements décrivent des
+                    expériences réelles, souvent difficiles. Traiter ces données de façon responsable est
+                    précisément la raison de le faire sur une plateforme cantonale officielle plutôt que sur
+                    un formulaire improvisé.
+                </li>
+            </ul>
+
+            <p>
+                Rien de tout cela n'est de l'ingénierie spectaculaire, et c'est exactement pour cela que cela
+                mérite de l'attention. Le plus difficile, dans un outil civique comme celui-ci, n'est pas la
+                technique — c'est de fabriquer quelque chose d'assez rassurant pour que les gens s'en servent
+                vraiment.
+            </p>
+
+            <h2>Une pièce d'un ensemble plus large</h2>
+
+            <p>
+                Les signalements ne dorment pas dans une base de données. Agrégés et anonymisés, ils aident
+                les autorités à voir <em>où</em> et <em>comment</em> le harcèlement se produit, ce qui nourrit
+                ensuite le travail de prévention et l'affectation des moyens. Le lancement s'est accompagné
+                d'une campagne de sensibilisation plaçant des QR codes dans l'espace public : le lieu physique
+                où quelque chose s'est produit devient ainsi un point d'entrée direct pour le signaler.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Livrer cette plateforme m'a rappelé que le logiciel de service public donne le meilleur de
+                lui-même quand il s'efface : un moyen simple et digne de confiance de se faire entendre,
+                adossé au sérieux d'un canal officiel. C'est un petit bout de code à l'échelle des choses,
+                mais un bout de code que je suis sincèrement fier d'avoir écrit.
+            </p>
+
+            <p>
+                Vous pouvez en lire davantage sur la plateforme dans son ensemble dans la
+                <a href="../projects/guichet-unique.html">fiche projet Guichet Unique</a>, et trouver
+                l'application sur l'
+                <a href="https://apps.apple.com/ch/app/guichet-unique/id1449990570" target="_blank" rel="noopener">App Store</a>
+                et sur
+                <a href="https://play.google.com/store/apps/details?id=ch.ne.gumobile&hl=fr_CH" target="_blank" rel="noopener">Google Play</a>.
+            </p>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. Tous droits réservés.</p>
+            <p>Développeur .NET & Full Stack basé à Neuchâtel, en Suisse</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+</html>

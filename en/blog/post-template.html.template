@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Blog post scaffold. Copy into en/blog/ or fr/blog/ and rename to <slug>.html.
+     Every [PLACEHOLDER] below must be replaced — [LANG] is "en" or "fr" and must
+     match the folder you copied this into. The paths assume that depth, so they
+     work unchanged in either language. -->
+<html lang="[LANG]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +11,43 @@
     <meta name="keywords" content="[KEYWORDS - e.g., .NET, Software Development, Clean Architecture]">
     <meta name="author" content="Adrien Michaud">
     <title>[ARTICLE TITLE] | Adrien Michaud</title>
+    <!-- Remove this line to publish. Until then the draft stays out of search results. -->
     <meta name="robots" content="noindex">
-    <link rel="preload" href="../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../main.css">
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/[LANG]/blog/[SLUG].html">
+    <!-- Drop the two lines below if the article exists in one language only. -->
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/blog/[SLUG].html">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/blog/[SLUG].html">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="[ARTICLE TITLE]">
+    <meta property="og:description" content="[ARTICLE DESCRIPTION]">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/[LANG]/blog/[SLUG].html">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[ARTICLE TITLE]">
+    <meta name="twitter:description" content="[ARTICLE DESCRIPTION]">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "[ARTICLE TITLE]",
+      "description": "[ARTICLE DESCRIPTION]",
+      "datePublished": "[YYYY-MM-DD]",
+      "author": { "@type": "Person", "name": "Adrien Michaud", "url": "https://www.michaud-developpement-informatique.fr/[LANG]/" },
+      "publisher": { "@type": "Person", "name": "Adrien Michaud" },
+      "image": "https://www.michaud-developpement-informatique.fr/images/og-image.png",
+      "mainEntityOfPage": "https://www.michaud-developpement-informatique.fr/[LANG]/blog/[SLUG].html"
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -27,8 +64,10 @@
                 <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
                 <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
                 <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
-                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="index.html" class="nav-link">Blog</a></li>
                 <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <!-- [OTHERLANG] is the language you did NOT copy this into. -->
+                <li class="nav-lang"><a href="../../[OTHERLANG]/blog/[SLUG].html" class="nav-link" hreflang="[OTHERLANG]" lang="[OTHERLANG]">[OTHERLANG uppercased]</a></li>
             </ul>
         </div>
     </nav>
@@ -51,7 +90,7 @@
     <!-- Blog Post Content -->
     <main class="blog-post-content">
         <div class="container">
-            <a href="../blog.html" class="blog-back-link">← Back to Blog</a>
+            <a href="index.html" class="blog-back-link">← Back to Blog</a>
 
             <!-- Your article content starts here -->
 
@@ -123,6 +162,6 @@
         </div>
     </footer>
 
-    <script src="../main.js"></script>
+    <script src="../../main.js"></script>
 </body>
 </html>
