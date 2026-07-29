@@ -142,10 +142,12 @@
 
             <p>
                 L'application ne dialogue pas directement avec SwissID et AGOV. Les deux se trouvent derrière
-                un <strong>serveur de fédération d'identité OpenID Connect</strong>, et l'application
-                s'intègre à ce seul interlocuteur. C'est ce qui rend le troisième point ci-dessous vrai
-                plutôt que simplement souhaitable : ajouter un fournisseur, ou modifier le comportement de
-                l'un d'eux, est un travail pour la couche de fédération et non pour l'application.
+                un <strong>serveur de fédération d'identité OpenID Connect</strong> exploité par le service
+                informatique du canton, et l'application s'intègre à ce seul interlocuteur. Les relations
+                avec les fournisseurs d'identité appartiennent au canton ; l'application, elle, n'a qu'à
+                parler OIDC à un seul endpoint. C'est ce qui rend le troisième point ci-dessous vrai plutôt
+                que simplement souhaitable : ajouter un fournisseur, ou modifier le comportement de l'un
+                d'eux, est un travail pour la couche de fédération et non pour l'application.
             </p>
 
             <p>

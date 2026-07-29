@@ -136,10 +136,11 @@
 
             <p>
                 The app does not talk to SwissID and AGOV directly. Both sit behind an
-                <strong>OpenID Connect identity federation server</strong>, and the app integrates with
-                that single counterpart. This is what makes the third point below true rather than merely
-                aspirational: adding a provider, or changing how one behaves, is work for the federation
-                layer and not for the app.
+                <strong>OpenID Connect identity federation server</strong> operated by the canton's own IT
+                service, and the app integrates with that single counterpart. The relationships with the
+                identity providers belong to the canton; the app only has to speak OIDC to one endpoint.
+                This is what makes the third point below true rather than merely aspirational: adding a
+                provider, or changing how one behaves, is work for the federation layer and not for the app.
             </p>
 
             <p>
