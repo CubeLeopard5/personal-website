@@ -57,16 +57,19 @@ not the folder it sits in — a screen reader trusts that attribute.
 section added on one side and forgotten on the other is visible at a glance.
 Two layouts read from it:
 
-- `cv/cv.typ` — single column, sober. This is the one currently deployed.
-- `cv/cv-canvas.typ` — tinted sidebar carrying the site's hero gradient, with
-  photo, contact and skills in the band. The gradient is a darkened version of
-  the site's: white on the original `#667eea` only reaches 3.6:1.
+- `cv/cv-canvas.typ` — **the deployed one.** A tinted sidebar carrying the
+  site's hero gradient, with photo, contact and skills in the band. The gradient
+  is a darkened version of the site's: white on the original `#667eea` only
+  reaches 3.6:1, below the threshold for body text.
+- `cv/cv.typ` — single column, sober. Kept as a fallback: two-column layouts are
+  the ones applicant tracking systems scramble, so if you ever apply through a
+  large portal rather than to a person, send this one.
 
 Edit content in `data.typ`, never in a layout. Rebuild after any edit:
 
 ```sh
-typst compile --root . --input lang=fr cv/cv.typ fr/cv-adrien-michaud.pdf
-typst compile --root . --input lang=en cv/cv.typ en/cv-adrien-michaud.pdf
+typst compile --root . --input lang=fr cv/cv-canvas.typ fr/cv-adrien-michaud.pdf
+typst compile --root . --input lang=en cv/cv-canvas.typ en/cv-adrien-michaud.pdf
 ```
 
 `--root .` is required: the template reads `/images/adrien-michaud.jpg`, and
