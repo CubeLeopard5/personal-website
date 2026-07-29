@@ -310,6 +310,19 @@ p {
     z-index: 1;
 }
 
+/* Portrait. The ring keeps the photo legible against the hero gradient,
+   whose darker end sits close to the jacket tones in the picture. */
+.hero-photo {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.28);
+}
+
 .hero-title {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -945,6 +958,13 @@ p {
         letter-spacing: normal;
     }
 
+    .hero-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1.5rem;
+        border-width: 2px;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -1572,5 +1592,9 @@ p {
     .education-card,
     .service-card {
         animation: fadeInUp 0.6s ease;
+    }
+
+    .hero-photo {
+        animation: fadeInUp 0.8s ease;
     }
 }
