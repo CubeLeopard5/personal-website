@@ -206,10 +206,16 @@
     text(size: 11pt, weight: 600, fill: ACCENT, d.role)
     v(5pt)
     set text(size: 8.5pt, fill: MUTED)
+    // Les liens passent en bleu : l'information statique reste grise,
+    // l'information actionnable se distingue et signale qu'elle est cliquable.
+    show link: set text(fill: ACCENT)
     stack(spacing: 3pt,
       d.place,
-      [michaudadrien78\@gmail.com · linkedin.com/in/adrienmichaud],
-      [michaud-developpement-informatique.fr],
+      [
+        #link("mailto:michaudadrien78@gmail.com")[michaudadrien78\@gmail.com]
+        · #link("https://www.linkedin.com/in/adrienmichaud/")[linkedin.com/in/adrienmichaud]
+      ],
+      link("https://www.michaud-developpement-informatique.fr/")[michaud-developpement-informatique.fr],
     )
   },
   box(clip: true, radius: 50%, width: 30mm, height: 30mm,
