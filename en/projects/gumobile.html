@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GuMobile - The mobile app for Neuchâtel's Guichet Unique platform, a .NET MAUI shell on iOS and Android, launched in December 2022 and downloaded around 35,000 times.">
+    <meta name="keywords" content="GuMobile, Guichet Unique, .NET MAUI, iOS, Android, Neuchâtel, SwissID, AGOV, Public services, Switzerland">
+    <meta name="author" content="Adrien Michaud">
+    <title>GuMobile - The Guichet Unique mobile app | Adrien Michaud</title>
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/en/projects/gumobile.html">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/projects/gumobile.html">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/projects/gumobile.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/projects/gumobile.html">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="GuMobile — The Guichet Unique mobile app">
+    <meta property="og:description" content="GuMobile - The mobile app for Neuchâtel's Guichet Unique platform, a .NET MAUI shell on iOS and Android, launched in December 2022 and downloaded around 35,000 times.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/en/projects/gumobile.html">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_CH">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GuMobile — The Guichet Unique mobile app">
+    <meta name="twitter:description" content="GuMobile - The mobile app for Neuchâtel's Guichet Unique platform, a .NET MAUI shell on iOS and Android, launched in December 2022 and downloaded around 35,000 times.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">All projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../fr/projects/gumobile.html" class="nav-link" hreflang="fr" lang="fr">FR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project hero -->
+    <header class="project-hero">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">← Back to projects</a>
+            <h1 class="project-title">GuMobile</h1>
+            <p class="project-tagline">The Neuchâtel administration in a phone</p>
+        </div>
+    </header>
+
+    <!-- Project content -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Overview -->
+            <section class="content-section">
+                <h2>Project overview</h2>
+                <p>GuMobile is the mobile app for the Guichet Unique platform, on iOS and Android. It was launched by the Neuchâtel public IT service (SIEN) and its partners in December 2022, under the slogan "Your administration in your pocket".</p>
+                <p>It brings the canton's services into a phone — taxes, vehicle registration, school reports, fishing and hunting permits, the official gazette. Around 35,000 downloads to date, two thirds of them on iOS.</p>
+
+                <div class="screen-gallery">
+                    <img src="../../images/projects/gumobile-screen-1.webp" alt="The GuMobile welcome screen" width="457" height="808" loading="lazy" decoding="async">
+                    <img src="../../images/projects/gumobile-screen-2.webp" alt="GuMobile services grouped by theme" width="457" height="808" loading="lazy" decoding="async">
+                    <img src="../../images/projects/gumobile-screen-3.webp" alt="The GuMobile sign-in screen" width="457" height="808" loading="lazy" decoding="async">
+                    <img src="../../images/projects/gumobile-screen-4.webp" alt="The list of public services in GuMobile" width="457" height="808" loading="lazy" decoding="async">
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="content-section">
+                <h2>A native shell around web services</h2>
+                <p>GuMobile is not a native rewrite of the platform's two hundred-odd services: it is a .NET MAUI shell hosting the existing web ones. That choice has a direct and deliberate consequence — a service updated on the web is updated in the app at the same moment, without a trip through the stores.</p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <h3>One codebase, two stores</h3>
+                        <p>.NET MAUI produces the iOS and Android binaries from a single project, which avoids maintaining two apps in parallel for a product whose value lies elsewhere: in the services it makes reachable.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Sign-in leaves the WebView</h3>
+                        <p>Authentication is handled natively rather than inside the web view. That is what lets the app lean on the platform's own mechanisms, and what lets a session survive the move from one service to the next.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>What stays on the desktop</h3>
+                        <p>A few of the more involved services still go through the desktop version. The app does not pretend to cover them: sending someone explicitly to a computer beats offering a mobile path that fails halfway through.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contribution -->
+            <section class="content-section">
+                <h2>My contribution</h2>
+                <p>I maintain and extend the app. The most visible piece of work has been adding SwissID and AGOV sign-in — Switzerland's two recognised electronic identities — alongside the original Guichet Unique account.</p>
+
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <h3>SwissID and AGOV</h3>
+                        <p>Sign-in goes through an OpenID Connect identity federation server operated by the canton. The app therefore never talks to SwissID or AGOV directly: it addresses the federation server, which carries the relationship with each identity provider. Adding a provider becomes a matter of server-side configuration rather than a new release of the app.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Leaving the web view to authenticate</h3>
+                        <p>A sign-in flow trapped in a WebView is both less safe and less pleasant. Sending it out to the system browser means handling the return into the app and the resumption of the session properly — the least spectacular part of the work, and the one most noticed when it is done badly.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Shipping to two stores</h3>
+                        <p>Every release goes out to the App Store and the Play Console, each with its own review cycle and requirements. Automating those releases with Fastlane takes the most tedious and most error-prone part out of the equation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Links -->
+            <section class="content-section">
+                <h2>Find out more</h2>
+                <div class="project-links">
+                    <a href="https://apps.apple.com/ch/app/guichet-unique/id1449990570" target="_blank" class="project-link">iOS App Store →</a>
+                    <a href="https://play.google.com/store/apps/details?id=ch.ne.gumobile&hl=fr_CH" target="_blank" class="project-link">Google Play Store →</a>
+                    <a href="https://www.ne.ch/communiques-de-presse/le-guichet-unique-maintenant-en-version-mobile-votre-administration-dans-la-poche" target="_blank" class="project-link">Launch announcement →</a>
+                    <a href="../blog/swissid-agov-guichet-unique.html" class="project-link">The SwissID and AGOV article →</a>
+                    <a href="../index.html#contact" class="project-link">Get in touch →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. All rights reserved.</p>
+            <p>.NET & Full Stack Developer based in Neuchâtel, Switzerland</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+</html>

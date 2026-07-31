@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GuMobile - L'application mobile du Guichet Unique neuchâtelois, une coque .NET MAUI sur iOS et Android, lancée en décembre 2022 et téléchargée environ 35 000 fois.">
+    <meta name="keywords" content="GuMobile, Guichet Unique, .NET MAUI, iOS, Android, Neuchâtel, SwissID, AGOV, Services publics, Suisse">
+    <meta name="author" content="Adrien Michaud">
+    <title>GuMobile - L'application mobile du Guichet Unique | Adrien Michaud</title>
+    <link rel="preload" href="../../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="canonical" href="https://www.michaud-developpement-informatique.fr/fr/projects/gumobile.html">
+    <link rel="alternate" hreflang="en" href="https://www.michaud-developpement-informatique.fr/en/projects/gumobile.html">
+    <link rel="alternate" hreflang="fr" href="https://www.michaud-developpement-informatique.fr/fr/projects/gumobile.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.michaud-developpement-informatique.fr/en/projects/gumobile.html">
+
+    <!-- Open Graph / partage social -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adrien Michaud">
+    <meta property="og:title" content="GuMobile — L'application mobile du Guichet Unique">
+    <meta property="og:description" content="GuMobile - L'application mobile du Guichet Unique neuchâtelois, une coque .NET MAUI sur iOS et Android, lancée en décembre 2022 et téléchargée environ 35 000 fois.">
+    <meta property="og:url" content="https://www.michaud-developpement-informatique.fr/fr/projects/gumobile.html">
+    <meta property="og:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GuMobile — L'application mobile du Guichet Unique">
+    <meta name="twitter:description" content="GuMobile - L'application mobile du Guichet Unique neuchâtelois, une coque .NET MAUI sur iOS et Android, lancée en décembre 2022 et téléchargée environ 35 000 fois.">
+    <meta name="twitter:image" content="https://www.michaud-developpement-informatique.fr/images/og-image.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">AM</a>
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Tous les projets</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="../../en/projects/gumobile.html" class="nav-link" hreflang="en" lang="en">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Héro du projet -->
+    <header class="project-hero">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">← Retour aux projets</a>
+            <h1 class="project-title">GuMobile</h1>
+            <p class="project-tagline">L'administration neuchâteloise dans un téléphone</p>
+        </div>
+    </header>
+
+    <!-- Contenu du projet -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Présentation -->
+            <section class="content-section">
+                <h2>Présentation du projet</h2>
+                <p>GuMobile est l'application mobile de la plateforme Guichet Unique, disponible sur iOS et Android. Elle a été lancée par le Service informatique de l'entité neuchâteloise (SIEN) et ses partenaires en décembre 2022, sous le slogan « Votre administration dans la poche ».</p>
+                <p>Elle amène les prestations du canton dans un téléphone — impôts, immatriculation, bulletins scolaires, permis de pêche et de chasse, Feuille officielle. Environ 35&nbsp;000 téléchargements à ce jour, dont les deux tiers sur iOS.</p>
+
+                <div class="screen-gallery">
+                    <img src="../../images/projects/gumobile-screen-1.webp" alt="L'écran d'accueil de GuMobile" width="457" height="808" loading="lazy" decoding="async">
+                    <img src="../../images/projects/gumobile-screen-2.webp" alt="Les prestations de GuMobile classées par thème" width="457" height="808" loading="lazy" decoding="async">
+                    <img src="../../images/projects/gumobile-screen-3.webp" alt="L'écran de connexion de GuMobile" width="457" height="808" loading="lazy" decoding="async">
+                    <img src="../../images/projects/gumobile-screen-4.webp" alt="La liste des prestations tout public dans GuMobile" width="457" height="808" loading="lazy" decoding="async">
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="content-section">
+                <h2>Une coque native autour de prestations web</h2>
+                <p>GuMobile n'est pas une réécriture native des 200 et quelques prestations de la plateforme : c'est une coque .NET MAUI qui héberge les prestations web existantes. Ce choix a une conséquence directe et voulue — une prestation mise à jour côté web l'est aussitôt dans l'application, sans passer par une soumission aux magasins.</p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <h3>Une base de code, deux magasins</h3>
+                        <p>.NET MAUI produit les binaires iOS et Android depuis un projet unique, ce qui évite d'entretenir deux applications en parallèle pour un service dont la valeur est ailleurs : dans les prestations qu'il rend accessibles.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>La connexion sort de la WebView</h3>
+                        <p>L'authentification est prise en charge nativement plutôt que dans la vue web. C'est ce qui permet à l'application de s'appuyer sur les mécanismes du système, et à la session de survivre au passage d'une prestation à l'autre.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Ce qui reste sur ordinateur</h3>
+                        <p>Quelques prestations plus complexes passent encore par la version ordinateur. L'application ne prétend pas les couvrir : mieux vaut renvoyer explicitement vers le poste de travail que proposer un parcours mobile qui échouera à mi-chemin.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contribution -->
+            <section class="content-section">
+                <h2>Ma contribution</h2>
+                <p>J'assure la maintenance et l'amélioration de l'application. Le chantier le plus visible a été l'ajout de la connexion par SwissID et AGOV, les deux identités électroniques reconnues en Suisse, à côté du compte Guichet Unique historique.</p>
+
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <h3>SwissID et AGOV</h3>
+                        <p>La connexion passe par un serveur de fédération d'identité OpenID Connect, opéré par le canton. L'application ne dialogue donc pas directement avec SwissID ou AGOV : elle s'adresse au fédérateur, qui porte la relation avec chaque fournisseur d'identité. Ajouter un fournisseur devient une affaire de configuration côté serveur plutôt qu'une nouvelle version de l'application.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Sortir de la vue web pour s'authentifier</h3>
+                        <p>Un parcours de connexion enfermé dans une WebView est à la fois moins sûr et moins agréable. Le faire sortir vers le navigateur du système demande de gérer proprement le retour dans l'application et la reprise de session — c'est la partie la moins spectaculaire du travail, et celle qui se remarque le plus quand elle est bâclée.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Livrer sur deux magasins</h3>
+                        <p>Chaque version part vers l'App Store et le Play Console, avec leurs cycles de revue et leurs exigences propres. L'automatisation de ces livraisons, via Fastlane, retire de l'équation la partie la plus fastidieuse et la plus sujette à l'erreur humaine.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Liens -->
+            <section class="content-section">
+                <h2>En savoir plus</h2>
+                <div class="project-links">
+                    <a href="https://apps.apple.com/ch/app/guichet-unique/id1449990570" target="_blank" class="project-link">App Store iOS →</a>
+                    <a href="https://play.google.com/store/apps/details?id=ch.ne.gumobile&hl=fr_CH" target="_blank" class="project-link">Google Play Store →</a>
+                    <a href="https://www.ne.ch/communiques-de-presse/le-guichet-unique-maintenant-en-version-mobile-votre-administration-dans-la-poche" target="_blank" class="project-link">Communiqué de lancement →</a>
+                    <a href="../blog/swissid-agov-guichet-unique.html" class="project-link">L'article sur SwissID et AGOV →</a>
+                    <a href="../index.html#contact" class="project-link">Me contacter →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrien Michaud. Tous droits réservés.</p>
+            <p>Développeur .NET & Full Stack basé à Neuchâtel, en Suisse</p>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+</html>
