@@ -17,6 +17,10 @@
 
 #let SIDE = 64mm
 
+// Un seul ecart entre deux entrees de la bande, quelle que soit la section :
+// contact, competences et langues le partagent pour ne pas diverger.
+#let SIDE_GAP = 22pt
+
 #set document(title: "CV — Adrien Michaud", author: "Adrien Michaud")
 #set page(
   paper: "a4", margin: 0pt,
@@ -32,7 +36,7 @@
 
 // ── Intitules de section ───────────────────────────────────────────────────
 #let side-head(title) = block(spacing: 0pt, breakable: false)[
-  #v(11pt)
+  #v(16pt)
   #text(size: 7.5pt, weight: 600, tracking: 1.2pt, fill: ON_BAND, upper(title))
   #v(2.5pt)
   #line(length: 100%, stroke: 0.6pt + ON_BAND_SOFT)
@@ -59,7 +63,7 @@
         image("/images/adrien-michaud.jpg", width: 34mm, height: 34mm, fit: "cover")))
 
   side-head(d.heads.contact)
-  stack(spacing: 4pt,
+  stack(spacing: SIDE_GAP,
     text(fill: ON_BAND, d.place),
     link("mailto:michaudadrien78@gmail.com")[michaudadrien78\@gmail.com],
     link("https://www.linkedin.com/in/adrienmichaud/")[linkedin.com/in/adrienmichaud],
@@ -67,16 +71,22 @@
   )
 
   side-head(d.heads.skills)
+  // Aere volontairement : la bande est plus courte que la colonne de droite,
+  // l'espace gagne ici equilibre les deux colonnes.
   for (label, items) in d.skills {
-    block(spacing: 6pt, {
+    block(spacing: SIDE_GAP, {
       text(weight: 600, fill: ON_BAND, size: 8pt, label)
-      linebreak()
+      // espace intra-entree : volontairement plus serre que SIDE_GAP, pour que
+      // l'intitule reste visuellement attache a sa liste
+      v(5pt)
+      set par(leading: 0.95em)
       text(size: 7.8pt, items)
     })
   }
 
   side-head(d.heads.langs)
-  stack(spacing: 3pt, ..d.langs.map(l =>
+  set par(leading: 0.95em)
+  stack(spacing: SIDE_GAP, ..d.langs.map(l =>
     text(size: 7.8pt)[#text(weight: 600, fill: ON_BAND, l.at(0)) — #l.at(1)]))
 }
 
@@ -102,10 +112,8 @@
         v(2pt)
         for b in j.bullets { block(inset: (left: 9pt), spacing: 5pt, [• #b]) }
       }
-      if j.tech != "" {
-        v(2pt)
-        text(size: 8pt, fill: MUTED, j.tech)
-      }
+      // j.tech n'est pas rendu ici : les technologies vivent dans la bande.
+      // cv.typ les garde, lui — un ATS s'appuie sur ces mots-cles.
     })
   }
 
@@ -117,6 +125,18 @@
       text(size: 8pt, fill: MUTED, e.dates + "  ·  " + e.place)
       v(3pt)
       e.detail
+    })
+  }
+
+  main-head(d.heads.other)
+  for o in d.other {
+    block(breakable: false, spacing: 11pt, {
+      text(size: 11pt, weight: 600, fill: INK, o.org)
+      text(size: 10.5pt, fill: BODY, " · " + o.role)
+      linebreak()
+      text(size: 8pt, fill: MUTED, o.dates + "  ·  " + o.place)
+      v(3pt)
+      o.lead
     })
   }
 }

@@ -21,14 +21,15 @@
       edu: "Formation",
       skills: "Compétences",
       langs: "Langues",
+      other: "Autre",
     ),
     profile: [
-      Je développe des applications web et mobiles *en .NET* pour des institutions
-      publiques suisses — Blazor côté web, .NET MAUI côté mobile. Un domaine où le
-      logiciel doit fonctionner pour tout le monde et résister à un examen extérieur :
-      j'ai construit les services d'inscription des citoyens pour la plateforme de
-      vote électronique du canton de Neuchâtel, où le droit fédéral n'autorise que
-      les systèmes entièrement vérifiables.
+      Je développe des applications web et mobiles en .NET pour des institutions
+      publiques suisses — Blazor côté web, .NET MAUI côté mobile. J'ai construit le
+      système d'inscription au vote électronique du canton de Neuchâtel
+      (plus de 7~100 inscrits) ; j'assure la maintenance et l'amélioration de l'application
+      GuMobile (≈~35~000 téléchargements) et de la plateforme FreeWifi, plusieurs
+      milliers de connexions sur environ 300 points d'accès.
     ],
     jobs: (
       (
@@ -40,7 +41,7 @@
         bullets: (
           [Services d'inscription des citoyens au vote électronique cantonal —
            plus de 7~100 inscriptions depuis l'ouverture en juin 2026.],
-          [Plateforme de signalement du harcèlement de rue, livrée avec la Police
+          [Plateforme de signalement du harcèlement de rue, livrée pour la Police
            neuchâteloise.],
           [Connexion SwissID et AGOV dans l'application mobile Guichet Unique
            (≈~35~000 téléchargements), via un serveur de fédération d'identité
@@ -49,14 +50,6 @@
            expérimentations de gouvernance blockchain avec NEDAO.],
         ),
         tech: "C# · .NET · Blazor · MAUI · Angular · PHP · SQL Server · TeamCity · Fastlane",
-      ),
-      (
-        org: "ESN Neuchâtel", role: "Membre actif (bénévolat)", place: "Neuchâtel, Suisse",
-        dates: "Septembre 2024 — aujourd'hui",
-        lead: [J'aide les étudiants internationaux à trouver leurs repères en Suisse :
-               organisation d'événements et appui sur le côté pratique d'une
-               installation à l'étranger.],
-        bullets: (), tech: "",
       ),
       (
         org: "ESPRI Digital", role: "Développeur back-end (stage)", place: "Argentan, France",
@@ -85,13 +78,23 @@
        detail: [Faculty of Engineering and Computing. Quatrième année d'études
                 effectuée en échange.]),
     ),
+    // Meme forme qu'une entree de `jobs` : les deux mises en page les rendent
+    // avec le meme code.
+    other: (
+      (
+        org: "ESN Neuchâtel", role: "Membre actif (bénévolat)", place: "Neuchâtel, Suisse",
+        dates: "Septembre 2024 — aujourd'hui",
+        lead: [J'aide les étudiants internationaux à trouver leurs repères en Suisse :
+               organisation d'événements et appui sur le côté pratique d'une
+               installation à l'étranger.],
+        bullets: (), tech: "",
+      ),
+    ),
     skills: (
       ("Écosystème .NET", "C# · .NET Framework · Blazor · MAUI · ASP.NET Core"),
-      ("Architecture", "Clean Architecture · MediatR · API REST · normes eCH"),
-      ("Mobile", "iOS · Android · Fastlane"),
       ("Front-end", "Angular · Vue.js · TypeScript · JavaScript"),
-      ("Données", "Microsoft SQL Server · MySQL · Elasticsearch"),
-      ("DevOps & outils", "TeamCity · Git / SVN · IIS · Docker · Kubernetes"),
+      ("Données", "Microsoft SQL Server · MySQL"),
+      ("DevOps & outils", "TeamCity · Git / SVN · IIS"),
       ("Autres", "Node.js · PHP · C / C++ · Blockchain"),
     ),
     langs: (("Français", "langue maternelle"), ("Anglais", "niveau professionnel")),
@@ -107,13 +110,14 @@
       edu: "Education",
       skills: "Skills",
       langs: "Languages",
+      other: "Other",
     ),
     profile: [
-      I build web and mobile applications *in .NET* for Swiss public institutions —
-      Blazor on the web, .NET MAUI on mobile. A domain where software has to work for
-      everyone and hold up to outside scrutiny: I built the citizen registration
-      services for the canton of Neuchâtel's e-voting platform, where federal law
-      permits only fully verifiable systems.
+      I build web and mobile applications in .NET for Swiss public institutions —
+      Blazor on the web, .NET MAUI on mobile. I built the registration system for the
+      canton of Neuchâtel's electronic voting (more than 7,100 registrations); I maintain and
+      improve the GuMobile app (≈~35,000 downloads) and the FreeWifi platform,
+      several thousand connections across some 300 access points.
     ],
     jobs: (
       (
@@ -125,21 +129,13 @@
         bullets: (
           [Citizen registration services for cantonal electronic voting — more than
            7,100 registrations since they opened in June 2026.],
-          [Street harassment reporting platform, delivered with the Neuchâtel Police.],
+          [Street harassment reporting platform, delivered for the Neuchâtel Police.],
           [SwissID and AGOV sign-in in the Guichet Unique mobile app (≈~35,000
            downloads), through an OpenID Connect identity federation server.],
           [TAS/CAS jurisprudence platform in .NET and Angular; blockchain governance
            experiments with NEDAO.],
         ),
         tech: "C# · .NET · Blazor · MAUI · Angular · PHP · SQL Server · TeamCity · Fastlane",
-      ),
-      (
-        org: "ESN Neuchâtel", role: "Active member (volunteer)", place: "Neuchâtel, Switzerland",
-        dates: "September 2024 — present",
-        lead: [I help international students find their feet in Switzerland:
-               organising events, and lending a hand with the practical side of
-               moving to a new country.],
-        bullets: (), tech: "",
       ),
       (
         org: "ESPRI Digital", role: "Back End Developer (internship)", place: "Argentan, France",
@@ -168,13 +164,21 @@
        detail: [Faculty of Engineering and Computing. Fourth year of study,
                 completed on exchange.]),
     ),
+    other: (
+      (
+        org: "ESN Neuchâtel", role: "Active member (volunteer)", place: "Neuchâtel, Switzerland",
+        dates: "September 2024 — present",
+        lead: [I help international students find their feet in Switzerland:
+               organising events, and lending a hand with the practical side of
+               moving to a new country.],
+        bullets: (), tech: "",
+      ),
+    ),
     skills: (
       (".NET ecosystem", "C# · .NET Framework · Blazor · MAUI · ASP.NET Core"),
-      ("Architecture", "Clean Architecture · MediatR · REST APIs · eCH standards"),
-      ("Mobile", "iOS · Android · Fastlane"),
       ("Front-end", "Angular · Vue.js · TypeScript · JavaScript"),
-      ("Data", "Microsoft SQL Server · MySQL · Elasticsearch"),
-      ("DevOps & tooling", "TeamCity · Git / SVN · IIS · Docker · Kubernetes"),
+      ("Data", "Microsoft SQL Server · MySQL"),
+      ("DevOps & tooling", "TeamCity · Git / SVN · IIS"),
       ("Other", "Node.js · PHP · C / C++ · Blockchain"),
     ),
     langs: (("French", "native"), ("English", "professional working proficiency")),

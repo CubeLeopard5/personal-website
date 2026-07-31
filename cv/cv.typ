@@ -106,3 +106,18 @@
   })
 }
 
+#head(d.heads.other)
+#for o in d.other {
+  block(breakable: false, spacing: 9.5pt, {
+    grid(columns: (1fr, auto),
+      { text(size: 10.5pt, weight: 600, fill: INK, o.org)
+        text(size: 10pt, fill: BODY, " · " + o.role) },
+      text(size: 8.5pt, fill: MUTED, o.dates),
+    )
+    v(1pt)
+    text(size: 8.5pt, fill: MUTED, o.place)
+    v(3pt)
+    o.lead
+  })
+}
+
