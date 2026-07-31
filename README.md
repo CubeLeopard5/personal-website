@@ -8,7 +8,8 @@ Deployed on Vercel; the file path *is* the URL.
 ```
 main.css  main.js          shared by every page
 fonts/    inter-variable.woff2
-images/   favicon.svg  og-image.png
+images/   favicon.svg  og-image.png  adrien-michaud.jpg
+images/projects/         card visuals — see "Project card visuals"
 robots.txt  sitemap.xml  vercel.json
 
 en/                        English site
@@ -82,6 +83,45 @@ attribute renames it on the way out, so the visitor gets
 
 Keep it to one page. The layout is tuned so it just fits; adding a paragraph
 will silently push a nearly-empty second page, which reads as a mistake.
+
+## Project card visuals
+
+Every card in the Projects section may open with a `.project-media` band. It is
+always **16:9**, whatever it holds, so the grid stays regular across cards whose
+source material does not match — phone screenshots are portrait, app icons are
+square, site screenshots are landscape. The band is full-bleed, so its negative
+margin has to track `.project-card`'s padding; both values change at the 480px
+breakpoint and must be kept in step.
+
+Three fillings, all on the hero gradient:
+
+- `.project-device` — app screens side by side (GuMobile)
+- `.project-appicon` — a lone icon, for a store listing that carries no
+  screenshots (Nemo News)
+- `.project-shot` — a site screenshot, `object-fit: cover` from `top center`,
+  so put the page header at the top of the capture
+
+The GuMobile and Nemo News assets come from Apple's public lookup API:
+
+```sh
+curl -s "https://itunes.apple.com/lookup?id=1449990570&country=ch"   # Guichet unique
+curl -s "https://itunes.apple.com/lookup?id=1215309614&country=ch"   # Nemo News
+```
+
+Its CDN re-renders any URL at a chosen width and format — swap the trailing
+`/392x696bb.jpg` for `/800x0w.webp`. **Nemo News has no screenshots at all** on
+its listing, in any device class; the icon is all there is.
+
+The store screenshots are marketing assets, not raw captures: lime background,
+a headline burnt into the image, and an iPhone 8 frame. All three were cropped
+away — the committed files are the screen interior only, minus the fake iOS
+status bar. Redo it with `images/projects/` as the working directory if you ever
+refresh them; the device bezel sits at `(128, 290, 670, 1388)` in the 800px
+render, and the screen is that box inset by 43px on x, 133px on y.
+
+These visuals belong to the clients who published them (`sellerName: Etat de
+Neuchatel`). They illustrate work actually done on those products; they are not
+presented as this site's own.
 
 ## Adding a blog post
 
