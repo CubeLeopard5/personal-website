@@ -581,6 +581,13 @@ p {
     margin: 0 0 0.75rem 1.25rem;
 }
 
+/* A mark that carries its own colour needs no plate — and reads worse on one.
+   Same box, so the column of logos stays aligned either way. */
+.timeline-logo--plain {
+    background: none;
+    padding: 0;
+}
+
 .timeline-content h3 {
     color: var(--text-primary);
     margin-bottom: 0.25rem;
