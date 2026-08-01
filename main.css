@@ -802,6 +802,19 @@ p {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    display: flow-root;
+}
+
+/* School mark. Far wider than the company logos — these are 4:1 and 5.8:1
+   wordmarks — so height is the fixed dimension and max-width is the guard that
+   stops the widest one from crowding out the school name beside it. */
+.education-logo {
+    float: right;
+    height: 28px;
+    width: auto;
+    max-width: 155px;
+    object-fit: contain;
+    margin: 0.25rem 0 0.75rem 1.25rem;
 }
 
 .education-card:hover {
