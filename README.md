@@ -9,7 +9,8 @@ Deployed on Vercel; the file path *is* the URL.
 main.css  main.js          shared by every page
 fonts/    inter-variable.woff2
 images/   favicon.svg  og-image.png  adrien-michaud.jpg
-images/projects/         card visuals — see "Project card visuals"
+images/logos/            company and project marks
+images/projects/         screenshots — see "Project card visuals"
 robots.txt  sitemap.xml  vercel.json
 
 en/                        English site
@@ -86,10 +87,20 @@ will silently push a nearly-empty second page, which reads as a mistake.
 
 ## Project card visuals
 
+Marks live in `images/logos/`, screenshots in `images/projects/`. The split is
+what it looks like: a logo identifies an organisation and is reused wherever
+that organisation appears, a screenshot belongs to one page.
+
 A card in the Projects section opens with `.project-logo`, a 64px square badge
 above the title. The box is square and fixed rather than sized to each image,
 so every mark sits on the same baseline down the grid; `object-fit: contain`
 protects any that is not exactly 1:1.
+
+An entry in the Experience timeline carries its company mark under the date,
+via `.timeline-logo`. Those are wide wordmarks rather than square badges, so
+there the fixed dimension is **height** — matching their widths would set them
+at wildly different visual weights down the timeline. Two logo classes, two
+rules, because the two sets of source images genuinely differ in shape.
 
 Guichet Unique and GuMobile deliberately share one mark. GuMobile *is* that
 platform's app, and a badge of its own would have implied a separate product.
