@@ -542,6 +542,8 @@ p {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    /* contains the floated logo without clipping it, unlike overflow: hidden */
+    display: flow-root;
 }
 
 .timeline-content:hover {
@@ -560,17 +562,23 @@ p {
     border-radius: 20px;
 }
 
-/* Company mark in an experience entry. These are wide wordmarks rather than
-   square badges, so height is what is fixed — matching their widths would set
-   them at wildly different visual weights down the timeline. */
+/* Company mark in an experience entry, floated so the text wraps around it
+   instead of needing a reserved gutter. It has to come before the date pill in
+   the source, or it starts below that pill's line box rather than beside it.
+
+   Dark plate because most of these marks are white artwork, invisible against
+   the card. A fixed box with contain rather than a fixed height: the plate
+   should be the same size on every entry even though the wordmarks inside it
+   are not, otherwise the column of plates goes ragged. */
 .timeline-logo {
-    display: block;
-    height: 32px;
-    width: auto;
-    max-width: 160px;
+    float: right;
+    width: 96px;
+    height: 64px;
     object-fit: contain;
-    object-position: left center;
-    margin: 0.25rem 0 0.75rem;
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0 0.75rem 1.25rem;
 }
 
 .timeline-content h3 {
@@ -1166,6 +1174,14 @@ p {
 
     .timeline-content {
         padding: 1rem;
+    }
+
+    /* a 96px plate eats too much of a narrow card to leave the title room */
+    .timeline-logo {
+        width: 72px;
+        height: 48px;
+        padding: 7px;
+        margin-left: 0.75rem;
     }
 }
 
