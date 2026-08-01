@@ -86,42 +86,59 @@ will silently push a nearly-empty second page, which reads as a mistake.
 
 ## Project card visuals
 
-Every card in the Projects section may open with a `.project-media` band. It is
-always **16:9**, whatever it holds, so the grid stays regular across cards whose
-source material does not match — phone screenshots are portrait, app icons are
-square, site screenshots are landscape. The band is full-bleed, so its negative
-margin has to track `.project-card`'s padding; both values change at the 480px
-breakpoint and must be kept in step.
+A card in the Projects section opens with `.project-logo`, a 64px square badge
+above the title. The box is square and fixed rather than sized to each image,
+so every mark sits on the same baseline down the grid; `object-fit: contain`
+protects any that is not exactly 1:1.
 
-Three fillings, all on the hero gradient:
+Guichet Unique and GuMobile deliberately share one mark. GuMobile *is* that
+platform's app, and a badge of its own would have implied a separate product.
+Nemo Wifi has no logo — freewifi.ne.ch publishes none of its own, only partner
+logos and two banner JPGs.
 
-- `.project-device` — app screens side by side (GuMobile)
-- `.project-appicon` — a lone icon, for a store listing that carries no
-  screenshots (Nemo News)
-- `.project-shot` — a site screenshot, `object-fit: cover` from `top center`,
-  so put the page header at the top of the capture
+Screenshots live on the project pages, not the cards, where there is room to
+show them at a size worth looking at:
 
-The GuMobile and Nemo News assets come from Apple's public lookup API:
+- `.screen-gallery` — a scrolling row of phone screens. It scrolls rather than
+  shrinks, because screens squeezed to fit a narrow viewport are unreadable.
+- `.shot-figure` — a full-width screenshot of a web page, with a caption.
+
+`.project-media` and its three fillings (`.project-device`, `.project-appicon`,
+`.project-shot`) are the earlier full-bleed 16:9 card band. Nothing uses them
+today; they are kept because they solve a real problem — one fixed ratio for
+sources of mismatched shape — if a card ever carries an image again.
+
+### Where the store assets came from
 
 ```sh
 curl -s "https://itunes.apple.com/lookup?id=1449990570&country=ch"   # Guichet unique
 curl -s "https://itunes.apple.com/lookup?id=1215309614&country=ch"   # Nemo News
 ```
 
-Its CDN re-renders any URL at a chosen width and format — swap the trailing
-`/392x696bb.jpg` for `/800x0w.webp`. **Nemo News has no screenshots at all** on
-its listing, in any device class; the icon is all there is.
+The CDN re-renders any artwork URL at a chosen width and format — swap a
+trailing `/392x696bb.jpg` for `/800x0w.webp`.
 
-The store screenshots are marketing assets, not raw captures: lime background,
-a headline burnt into the image, and an iPhone 8 frame. All three were cropped
-away — the committed files are the screen interior only, minus the fake iOS
-status bar. Redo it with `images/projects/` as the working directory if you ever
-refresh them; the device bezel sits at `(128, 290, 670, 1388)` in the 800px
-render, and the screen is that box inset by 43px on x, 133px on y.
+**Do not trust the lookup API for screenshots.** It reports `screenshotUrls: []`
+for Nemo News, in every device class. That is the API being wrong: the store
+page carries eight iPhone screenshots. Scrape the page instead and pull the
+`PurpleSource` artwork templates out of its embedded JSON.
 
-These visuals belong to the clients who published them (`sellerName: Etat de
-Neuchatel`). They illustrate work actually done on those products; they are not
-presented as this site's own.
+Both apps' screenshots are marketing assets rather than raw captures — a
+coloured backdrop, a headline burnt into the image, a device frame. All three
+are cropped away, along with the fake iOS status bar; the committed files are
+the screen interior only. The two apps use different templates, so detect the
+frame rather than reusing coordinates: find the bounding box of the dark bezel,
+then scan inward from its centre lines for the first non-dark pixel.
+
+Only screenshots whose content has actually been looked at belong here. Alt
+text written for an unopened image is a guess, and a screen reader cannot tell
+the difference.
+
+### Rights
+
+The logos and store screenshots belong to the clients who published them
+(`sellerName: Etat de Neuchatel`). They illustrate work actually done on those
+products; they are not presented as this site's own.
 
 ## Adding a blog post
 
