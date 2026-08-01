@@ -560,6 +560,19 @@ p {
     border-radius: 20px;
 }
 
+/* Company mark in an experience entry. These are wide wordmarks rather than
+   square badges, so height is what is fixed — matching their widths would set
+   them at wildly different visual weights down the timeline. */
+.timeline-logo {
+    display: block;
+    height: 32px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    object-position: left center;
+    margin: 0.25rem 0 0.75rem;
+}
+
 .timeline-content h3 {
     color: var(--text-primary);
     margin-bottom: 0.25rem;

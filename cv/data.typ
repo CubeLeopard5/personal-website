@@ -59,7 +59,7 @@
         bullets: (), tech: "Kubernetes · Docker · Node.js",
       ),
       (
-        org: "Axxone System", role: "Développeur full stack (deux stages)", place: "Lyon, France",
+        org: "Axeo System", role: "Développeur full stack (deux stages)", place: "Lyon, France",
         dates: "2020 — 2022",
         lead: [Juillet–décembre 2020 : composants Vue.js et recherche plein texte sur
                Elasticsearch. Septembre 2021 – mars 2022 : refonte du site de la
@@ -145,7 +145,7 @@
         bullets: (), tech: "Kubernetes · Docker · Node.js",
       ),
       (
-        org: "Axxone System", role: "Full Stack Developer (two internships)", place: "Lyon, France",
+        org: "Axeo System", role: "Full Stack Developer (two internships)", place: "Lyon, France",
         dates: "2020 — 2022",
         lead: [July–December 2020: Vue.js components and a full-text search over
                Elasticsearch. September 2021 – March 2022: redesign of the Mutuelle
