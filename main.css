@@ -1034,6 +1034,17 @@ p {
    Responsive Design
    =================================== */
 
+/* The horizontal menu has to survive down to 769px, where the hamburger takes
+   over. Eight items at a 2rem gap do not fit that width once the French labels
+   are in — "Compétences" and "Formation" are long — so the gap tightens through
+   the band just above the breakpoint. Must stay before the 768px block, whose
+   gap: 0 belongs to the stacked mobile menu and has to win below. */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 1.25rem;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
