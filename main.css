@@ -582,10 +582,11 @@ p {
 }
 
 /* A mark that carries its own colour needs no plate — and reads worse on one.
-   Same box, so the column of logos stays aligned either way. */
+   Only the background goes: keeping the padding leaves every logo the same
+   usable box, so a plated mark is not rendered a third smaller than a bare one
+   purely because the plate ate its inset. */
 .timeline-logo--plain {
     background: none;
-    padding: 0;
 }
 
 .timeline-content h3 {
@@ -647,12 +648,12 @@ p {
 /* Card logo. Every mark is a square badge, so a fixed square box keeps them on
    one baseline down the grid; contain protects any that is not exactly 1:1. */
 .project-logo {
-    display: block;
+    float: right;
     width: 64px;
     height: 64px;
     object-fit: contain;
     border-radius: 14px;
-    margin-bottom: 1.25rem;
+    margin: 0 0 1rem 1.25rem;
 }
 
 /* Media band — one fixed ratio for every card, whatever it holds.
